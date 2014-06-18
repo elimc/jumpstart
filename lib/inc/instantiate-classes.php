@@ -1,0 +1,31 @@
+<?php
+/**
+ * Load and instantiate Custom Posts and Custom Taxonomies.
+ */
+
+
+
+/**
+ * Load Custom Post and Custom Taxonomy Classes.
+ *
+ * The load_template() function imports certain gloabal vars; it's like require_once() on steroids.
+ */
+load_template( get_template_directory() . '/lib/inc/CustomPost.php' );
+load_template( get_template_directory() . '/lib/inc/CustomTaxonomy.php' );
+
+
+
+// Use namespaces to ensure no class conflicts. Create a new variable for each CPT/CT that you want to instantiate.
+// WARNING!: Use of namespaces REQUIRES a server with PHP 5.3.
+$custom_post = new jumpstart\CustomPost( 'jumpstart' );
+$custom_taxonomy = new jumpstart\CustomTaxonomy( 'jumpstart' );
+$custom_post2 = new jumpstart\CustomPost( 'jumpstart' );
+$custom_taxonomy2 = new jumpstart\CustomTaxonomy( 'jumpstart' );
+
+
+
+// Instantiate a Custom Post Type and a Custom Taxonomy.
+$custom_post->make( 'sample', 'Sample Post', 'Sample Posts' );
+$custom_taxonomy->make( 'sample-taxonomy', 'Sample Taxonomy', 'Sample Taxonomies', array( 'sample' ) );
+$custom_post->make( 'sample2', 'Sample Post2', 'Sample Posts2' );
+$custom_taxonomy->make( 'sample-taxonomy2', 'Sample Taxonomy2', 'Sample Taxonomies2', array( 'sample2' ) );
