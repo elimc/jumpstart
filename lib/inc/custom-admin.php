@@ -50,16 +50,16 @@ add_filter( 'login_headertitle', 'jumpstart_login_logo_url_title' );
  * @link http://codex.wordpress.org/Dashboard_Widgets_API Turn off meta boxes.
  */
 function jumpstart_disable_default_dashboard_widgets() {
-        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
+//        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+//        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+//        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+//        remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 }
 add_action('wp_dashboard_setup', 'jumpstart_disable_default_dashboard_widgets');
 
@@ -71,10 +71,10 @@ add_action('wp_dashboard_setup', 'jumpstart_disable_default_dashboard_widgets');
  * @link http://codex.wordpress.org/Function_Reference/remove_submenu_page Remove submenu pages.
  */
 function jumpstart_remove_submenus() {
-    remove_submenu_page( 'themes.php', 'theme-editor.php' );
-    remove_submenu_page( 'themes.php', 'customize.php' );
-    remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
-    remove_submenu_page( 'tools.php', 'tools.php' );
+//    remove_submenu_page( 'themes.php', 'theme-editor.php' );
+//    remove_submenu_page( 'themes.php', 'customize.php' );
+//    remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+//    remove_submenu_page( 'tools.php', 'tools.php' );
 }
 add_action('admin_menu', 'jumpstart_remove_submenus', 999);
 
@@ -92,10 +92,10 @@ function jumpstart_remove_menus() {
 //    remove_menu_page( 'edit.php?post_type=page' );    //Pages
 //    remove_menu_page( 'edit-comments.php' );          //Comments
 //    remove_menu_page( 'themes.php' );                 //Appearance
-    remove_menu_page( 'plugins.php' );                //Plugins
-    remove_menu_page( 'users.php' );                  //Users
-    remove_menu_page( 'tools.php' );                  //Tools
-    remove_menu_page( 'options-general.php' );        //Settings
+//    remove_menu_page( 'plugins.php' );                //Plugins
+//    remove_menu_page( 'users.php' );                  //Users
+//    remove_menu_page( 'tools.php' );                  //Tools
+//    remove_menu_page( 'options-general.php' );        //Settings
 }
 add_action( 'admin_menu', 'jumpstart_remove_menus', 999 );
 
