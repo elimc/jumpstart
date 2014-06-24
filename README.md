@@ -13,13 +13,14 @@ If you don't know how to install this theme, then this is not the theme for you.
 TODO
 ----
 
+* Add some modular JS functionality.
 * More cowbell.
 
 Changelog
 ---------
 
 ### 1.0.1 (June 19, 2014)
-* Fixed wrong theme name in stle.css.
+* Fixed wrong theme name in style.css.
 * Commented out admin changes.
 
 ### 1.0 (June 18, 2014)
