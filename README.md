@@ -19,11 +19,14 @@ TODO
 Changelog
 ---------
 
-### 1.0.1 (June 19, 2014)
+### 0.1.2
+* Some grammer fixes.
+
+### 0.1.1 (June 19, 2014)
 * Fixed wrong theme name in style.css.
 * Commented out admin changes.
 
-### 1.0 (June 18, 2014)
+### 0.1 (June 18, 2014)
 * Initial Commit.
 
 Author
