@@ -14,9 +14,7 @@ get_header(); ?>
         </header><!-- .page-header -->
 
         <section>
-            <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'jumptstart' ); ?></p>
-
-            <?php get_search_form(); ?>
+            <p><?php _e( 'Sorry, something went wrong.', 'jumptstart' ); ?></p>
         </section><!-- page-content -->
 
     </main><!-- main -->

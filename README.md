@@ -13,7 +13,7 @@ If you don't know how to install this theme, then this is not the theme for you.
 TODO
 ----
 
-* Add some modular JS functionality.
+* Add some more modular JS functionality.
 * More cowbell.
 
 Changelog
