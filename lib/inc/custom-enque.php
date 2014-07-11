@@ -10,5 +10,9 @@ function jumpstart_scripts() {
 
     // Load the toggle module.
     wp_enqueue_script( 'jumpstart-navigation', get_template_directory_uri() . '/js/toggler.js', array( 'jquery' ), '1.0', TRUE );
+
+    // Load the default JS module, for site specific scripts.
+    wp_enqueue_script( 'jumpstart-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0', TRUE );
+
 }
 add_action( 'wp_enqueue_scripts', 'jumpstart_scripts' );
