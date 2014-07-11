@@ -19,10 +19,12 @@ TODO
 Changelog
 ---------
 
-### 0.1.3
+### 0.2
 * Added a toggler module for toggling things.
 * Removed vestigial navigation.js.
 * Style additions
+* Added icon option for Custom Post Type Class
+* Cleaned up and documented the Custom Post Type Class
 
 ### 0.1.2
 * Some grammer fixes.
