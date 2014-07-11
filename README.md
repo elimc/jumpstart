@@ -19,6 +19,11 @@ TODO
 Changelog
 ---------
 
+### 0.1.3
+* Added a toggler module for toggling things.
+* Removed vestigial navigation.js.
+* Style additions
+
 ### 0.1.2
 * Some grammer fixes.
 

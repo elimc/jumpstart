@@ -24,8 +24,9 @@ $custom_taxonomy2 = new jumpstart\CustomTaxonomy( 'jumpstart' );
 
 
 
-// Instantiate a Custom Post Type and a Custom Taxonomy.
-$custom_post->make( 'sample', 'Sample Post', 'Sample Posts' );
+// Instantiate a Custom Post Type and a Custom Taxonomy
+// List of menu icons: http://melchoyce.github.io/dashicons/
+$custom_post->make( 'sample', 'Sample Post', 'Sample Posts', array ( 'menu_icon' => 'dashicons-admin-media' ) );
 $custom_taxonomy->make( 'sample-taxonomy', 'Sample Taxonomy', 'Sample Taxonomies', array( 'sample' ) );
 $custom_post->make( 'sample2', 'Sample Post2', 'Sample Posts2' );
 $custom_taxonomy->make( 'sample-taxonomy2', 'Sample Taxonomy2', 'Sample Taxonomies2', array( 'sample2' ) );

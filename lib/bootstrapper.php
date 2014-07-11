@@ -24,4 +24,4 @@ require_once 'inc/custom-functions.php';                         // Write any cu
 require_once 'inc/custom-template-tags.php';                     // Display information dynamically.
 require_once 'inc/custom-admin.php';                             // Customize the admin section.
 require_once 'inc/custom-utility-functions.php';                 // Add theme support and run some filters.
-//require_once 'inc/instantiate-classes.php';                      // Load and instantiate Custom Posts and Custom Taxonomies.
+require_once 'inc/instantiate-classes.php';                      // Load and instantiate Custom Posts and Custom Taxonomies.
