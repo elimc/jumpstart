@@ -5,8 +5,8 @@ var gulp = require('gulp'),
 
 // Sources
 var sassWatch = './lib/scss/**/*.scss',
-    sassSource = './lib/scss/*.scss',
-    sassDestination = './style.scss',
+    sassDestination = './lib',
+    sassSource = './lib/scss/style.scss',
     phpWatch = './**/*.php',
     css = './style.scss';
 
