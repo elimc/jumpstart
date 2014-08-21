@@ -19,14 +19,17 @@ TODO
 Changelog
 ---------
 
-### 0.2
+### 0.3 (Aug 21, 2014)
+* Now using SASS.
+
+### 0.2 (June 11, 2014)
 * Added a toggler module for toggling things.
 * Removed vestigial navigation.js.
 * Style additions
 * Added icon option for Custom Post Type Class
 * Cleaned up and documented the Custom Post Type Class
 
-### 0.1.2
+### 0.1.2 (June 11, 2014)
 * Some grammer fixes.
 
 ### 0.1.1 (June 19, 2014)

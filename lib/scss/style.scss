@@ -1,0 +1,36 @@
+/*
+Theme Name: jumpstart
+Theme URI: https://github.com/elimc/jumpstart/
+Author: Eli McMakin
+Author URI: http://elimcmakin.com
+Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
+Version: 0.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Reset taken from Nicolas Gallagher's normalize.css project - https://github.com/necolas/normalize.css
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Clearings
+4.0 - Global Styles
+5.0 - Header
+6.0 - Nav
+7.0 - Footer
+8.0 - Front Page
+9.0 - Generic Page
+--------------------------------------------------------------*/
+
+@import 'partials/reset';
+@import 'partials/typography';
+@import 'partials/clearings';
+@import 'partials/global-styles';
+@import 'partials/header';
+@import 'partials/nav';
+@import 'partials/footer';
+@import 'partials/front-page';
+@import 'partials/generic-page';
