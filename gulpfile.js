@@ -41,5 +41,5 @@ gulp.task('css-reload', function() {
 gulp.task('default', ['sass','browser-sync'], function() {
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(phpWatch, ['php-reload']);
-    gulp.watch(css, ['css-reload']);
+//    gulp.watch(css, ['css-reload']);
 });
