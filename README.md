@@ -5,6 +5,13 @@ A simple starter theme for WordPress. It is simpler and cleaner than the _s them
 
 This theme is built for those who are going to custom code their sites, and want a very simple, modular framework to get started on.
 
+About
+-----
+
+This theme comes out of the box with SASS, Gulp.js, CPT's, and many custom functions that I have put together over the years.
+
+Those who prefer CSS over SASS can throw out the node modules folder, gulp files, and SASS files. In your case, you will simply use style.css.
+
 Install
 -------
 
@@ -20,7 +27,8 @@ Changelog
 ---------
 
 ### 0.3 (Aug 21, 2014)
-* Now using SASS.
+* Moved style.css contents to SASS files.
+* Added npm modules and gulp.js.
 
 ### 0.2 (June 11, 2014)
 * Added a toggler module for toggling things.

@@ -7,8 +7,7 @@ var gulp = require('gulp'),
 var sassWatch = './lib/scss/**/*.scss',
     sassSource = './lib/scss/*.scss',
     sassDestination = './',
-    phpWatch = './**/*.php',
-    css = './style.scss';
+    phpWatch = './**/*.php';
 
 // Set the proxy.
 gulp.task('browser-sync', function () {
@@ -31,15 +30,8 @@ gulp.task('php-reload', function() {
         .pipe(reload({stream:true}));
 });
 
-// Reload CSS
-gulp.task('css-reload', function() {
-    return gulp.src(css)
-        .pipe(reload({stream:true}));
-});
-
 // Run a series of tasks when "gulp" is entered in the CLI.
 gulp.task('default', ['sass','browser-sync'], function() {
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(phpWatch, ['php-reload']);
-    gulp.watch(css, ['css-reload']);
 });
