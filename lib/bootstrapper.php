@@ -13,7 +13,8 @@
  * assets       -       Theme specific assets, i.e. sprites, images, etc ...
  * fonts        -       Any web fonts to be loaded locally.
  * inc          -       All classes and function files.
- * js           -       All js and css files.
+ * js           -       All js files.
+ * scss         -       SASS files, and partials.
  *
  */
 
