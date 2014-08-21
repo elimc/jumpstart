@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<section>
-		<main role="main">
+		<main id="search" role="main">
 
 		<?php if ( have_posts() ) { ?>
 

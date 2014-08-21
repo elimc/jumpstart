@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-    <main role="main">
+    <main id="not-found" role="main">
 
         <header>
             <h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'jumptstart' ); ?></h1>

@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-    <main role="main">
+    <main id="archive" role="main">
 
     <?php if ( have_posts() ) { ?>
 
