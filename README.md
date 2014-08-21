@@ -33,7 +33,7 @@ Changelog
 ### 0.2 (June 11, 2014)
 * Added a toggler module for toggling things.
 * Removed vestigial navigation.js.
-* Style additions
+* Style additions.
 * Added icon option for Custom Post Type Class
 * Cleaned up and documented the Custom Post Type Class
 
