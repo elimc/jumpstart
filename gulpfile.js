@@ -5,8 +5,8 @@ var gulp = require('gulp'),
 
 // Sources
 var sassWatch = './lib/scss/**/*.scss',
-    sassDestination = './lib',
-    sassSource = './lib/scss/style.scss',
+    sassSource = './lib/scss/*.scss',
+    sassDestination = './',
     phpWatch = './**/*.php',
     css = './style.scss';
 
@@ -41,5 +41,5 @@ gulp.task('css-reload', function() {
 gulp.task('default', ['sass','browser-sync'], function() {
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(phpWatch, ['php-reload']);
-//    gulp.watch(css, ['css-reload']);
+    gulp.watch(css, ['css-reload']);
 });
