@@ -33,14 +33,6 @@ gulp.task('browser-sync', function () {
 });
 
 // Compile Sass file to CSS, and reload browser(s).
-gulp.task('sass', function() {
-    return gulp.src(sassSource)
-        .pipe(sass())
-        .pipe(gulp.dest(sassDestination))
-        .pipe(reload({stream:true}));
-});
-
-// Compile Sass file to CSS, and reload browser(s).
 // Uncomment the Bourbon line to use Bourbon SASS in the project.
 gulp.task('sass', function() {
     return gulp.src(sassSource)
@@ -51,9 +43,15 @@ gulp.task('sass', function() {
     .pipe(reload({stream:true}));
 });
 
-// Run a series of tasks when "gulp" is entered in the CLI.
+// Reload PHP pages.
+gulp.task('page-reload', function() {
+    return gulp.src(phpWatch)
+        .pipe(reload({stream:true}));
+});
+
+// Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
 gulp.task('default', ['sass','browser-sync'], function() {
     gulp.watch(sassWatch, ['sass']);
-    gulp.watch(phpWatch, ['php-reload']);
-    gulp.watch(jsWatch, ['php-reload']);
+    gulp.watch(phpWatch, ['page-reload']);
+    gulp.watch(jsWatch, ['page-reload']);
 });
