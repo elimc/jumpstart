@@ -11,17 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
 
-    <?php
-
-    echo get_template_directory_uri() . "/favicon.ico";
-    $filename = get_template_directory_uri() . "/favicon.ico";
-    if (file_exists($filename)) { ?>
-        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-
-    <?php
-    }
-
-    ?>
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
 <?php wp_head(); ?>
 </head>
