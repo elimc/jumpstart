@@ -1,6 +1,6 @@
 <?php
 /*
- * Main PHP bootstrap file.
+ * Main jumpstart init file.
  *
  * Feel free to browse through the files to pick and choose what functionality you need for your site.
  *
@@ -26,4 +26,4 @@ require_once 'inc/custom-template-tags.php';                     // Display info
 require_once 'inc/custom-admin.php';                             // Customize the admin section.
 require_once 'inc/custom-utility-functions.php';                 // Add theme support and run some filters.
 require_once 'inc/advanced-custom-fields.php';                   // Call any custom ACF functions.
-require_once 'inc/instantiate-cpt.php';                          // Load and instantiate Custom Posts and Custom Taxonomies.
+require_once 'inc/instantiate-cpt.php';                          // Magically load and instantiate any Custom Posts Types and Custom Taxonomies.
