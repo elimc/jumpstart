@@ -26,6 +26,10 @@ TODO
 Changelog
 ---------
 
+### 0.3.1 (Sep 9, 2914)
+* Lots of little bug fixes and small feature enhancements
+* Better documentation
+
 ### 0.3 (Aug 21, 2014)
 * Moved style.css contents to SASS files.
 * Added npm modules and gulp.js.
