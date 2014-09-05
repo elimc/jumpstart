@@ -27,7 +27,7 @@ class CustomPost {
     /**
      * Create the Custom Post Type.
      *
-     * @param string $type Internal name of CPT.
+     * @param string $type Name of the posttype.
      * @param string $singular_label CPT Name in singular form.
      * @param string $plural_label CPT Name in plural form.
      * @param mixed $settings Custom user settings to override default CPT values.

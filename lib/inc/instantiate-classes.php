@@ -1,6 +1,6 @@
 <?php
 /**
- * Load and instantiate Custom Posts and Custom Taxonomies.
+ * Magically load and instantiate Custom Posts and Custom Taxonomies.
  */
 
 
@@ -19,14 +19,14 @@ load_template( get_template_directory() . '/lib/inc/CustomTaxonomy.php' );
 // WARNING!: Use of namespaces REQUIRES a server with PHP 5.3.
 $custom_post = new jumpstart\CustomPost( 'jumpstart' );
 $custom_taxonomy = new jumpstart\CustomTaxonomy( 'jumpstart' );
-$custom_post2 = new jumpstart\CustomPost( 'jumpstart' );
-$custom_taxonomy2 = new jumpstart\CustomTaxonomy( 'jumpstart' );
 
 
 
-// Instantiate a Custom Post Type and a Custom Taxonomy
+// Instantiate a Custom Post Type.
 // List of menu icons: http://melchoyce.github.io/dashicons/
 $custom_post->make( 'sample', 'Sample Post', 'Sample Posts', array ( 'menu_icon' => 'dashicons-admin-media' ) );
-$custom_taxonomy->make( 'sample-taxonomy', 'Sample Taxonomy', 'Sample Taxonomies', array( 'sample' ) );
 $custom_post->make( 'sample2', 'Sample Post2', 'Sample Posts2' );
+
+// Instantiate a Custom Taxonomy, that can be related to the Custom Post Type.
+$custom_taxonomy->make( 'sample-taxonomy', 'Sample Taxonomy', 'Sample Taxonomies', array( 'sample' ) );
 $custom_taxonomy->make( 'sample-taxonomy2', 'Sample Taxonomy2', 'Sample Taxonomies2', array( 'sample2' ) );
