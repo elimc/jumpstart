@@ -5,13 +5,23 @@
 
 
 
-function jumpstart_options_page_settings( $options ) {
-    $options['title'] = __('Global Content');
-    $options['pages'] = array(
-        __('Header'),
-        __('Footer'),
-    );
-
-    return $options;
+/**
+ * Create sub-pages, that have global variables, that sit under the Custom Fields menu.
+ */
+if( function_exists( 'acf_add_options_sub_page' ) ) {
+    acf_add_options_sub_page(array(
+        'title' => 'Header',
+        'parent' => 'edit.php?post_type=acf-field-group',
+        'capability' => 'manage_options'
+    ));
+    acf_add_options_sub_page(array(
+        'title' => 'Footer',
+        'parent' => 'edit.php?post_type=acf-field-group',
+        'capability' => 'manage_options'
+    ));
+    acf_add_options_sub_page(array(
+        'title' => 'Sidebar',
+        'parent' => 'edit.php?post_type=acf-field-group',
+        'capability' => 'manage_options'
+    ));
 }
-add_filter('acf/options_page/settings', 'jumpstart_options_page_settings');
