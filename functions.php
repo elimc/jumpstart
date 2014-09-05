@@ -10,7 +10,7 @@
  */
 if ( ! function_exists( 'jumpstart_bootstrapper' ) ) {
     function jumpstart_bootstrapper() {
-        require get_template_directory() . '/lib/bootstrapper.php';
+        require get_template_directory() . '/lib/jumpstart-init.php';
     }
 }
 add_action( 'after_setup_theme', 'jumpstart_bootstrapper' );
