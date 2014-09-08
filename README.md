@@ -34,6 +34,7 @@ Changelog
 * Made sure Foundation and Bourbon were properly linked.
 * Added a sleek new Advanced Custom Fields menu for global options.
 * Created clean-front-end.php, to remove WP junk in header.
+* Added a blank favicon.ico (will not cause 404 errors). Just remember to add your own favicon.
 
 ### 0.4 (Sep 5, 2014)
 * Lots of little bug fixes and small feature enhancements.
