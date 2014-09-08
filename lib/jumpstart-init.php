@@ -27,5 +27,5 @@ require_once 'inc/custom-template-tags.php';                     // Display info
 require_once 'inc/clean-front-end.php';                          // Clean up WP junk code, on the front-end.
 require_once 'inc/custom-admin.php';                             // Customize the admin section.
 require_once 'inc/custom-utility-functions.php';                 // Add theme support and run some filters.
-require_once 'inc/advanced-custom-fields.php';                   // Call any custom ACF functions.
-require_once 'inc/cpt-init.php';                                 // Magically load any Custom Posts Types and Custom Taxonomies.
+//require_once 'inc/advanced-custom-fields.php';                   // Call any custom ACF functions.
+//require_once 'inc/cpt-init.php';                                 // Magically load any Custom Posts Types and Custom Taxonomies.
