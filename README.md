@@ -30,6 +30,7 @@ Changelog
 
 ### 0.4.1 (Sep 7, 2014)
 * Node Modules folder removed. Node mules now installed with "npm install".
+* Made sure Foundation and Bourbon were properly linked.
 
 ### 0.4 (Sep 5, 2014)
 * Lots of little bug fixes and small feature enhancements.
