@@ -15,7 +15,7 @@ var browserSyncProxy = 'localhost/jump_start/';
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
-//    bourbon = require('node-bourbon'),
+    bourbon = require('node-bourbon'),
     reload = browserSync.reload;
 
 // Define sources of files to monitor.
@@ -37,7 +37,7 @@ gulp.task('browser-sync', function () {
 gulp.task('sass', function() {
     return gulp.src(sassSource)
     .pipe(sass(
-//    { includePaths: require('node-bourbon').includePaths }
+    { includePaths: require('node-bourbon').includePaths }
     ))
     .pipe(gulp.dest(sassDestination))
     .pipe(reload({stream:true}));

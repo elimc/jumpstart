@@ -1,28 +1,29 @@
 **jumpstart**
 ===========================
 
-A simple starter theme for WordPress. It is simpler and cleaner than the _s theme from WordPress, but it has more functionality.
+A simple starter theme for WordPress. It is simpler and cleaner than the _s theme from WordPress, yet it has much more functionality, and a more sophisticated build process.
 
-This theme is built for those who are going to custom code their sites, and want a very simple, modular framework to get started on.
+This theme is built for those who are going to custom code their sites.
 
 About
 -----
 
 This theme comes out of the box with SASS, Gulp.js, CPT's, and many custom functions that I have put together over the years.
 
-Those who prefer CSS over SASS can throw out the node modules folder, gulp files, and SASS files. In your case, you will simply use style.css.
+Those who prefer CSS over SASS can throw out the node modules folder, gulp files, and SASS files. In your case, you will simply use style.css. Those using SASS will find Foundation and Bourbon packaged with the theme.
 
 Install
 -------
 
 If you don't know how to install this theme, then this is not the theme for you.
 
-After installing the theme into the themes directory, you can get Gulp working by entering "npm install" into the CLI, from the themes folder. Then you will follow the instructions located in gulpfle.js.
+If you are a major studmeister:
+
+After installing the theme into the themes directory, you can get Gulp working by entering "npm install" into the CLI, from the themes folder. This will automatically load all of the required node_modules. Then you will follow the instructions located in gulpfle.js.
 
 TODO
 ----
 
-* Add some more modular JS functionality.
 * More cowbell.
 
 Changelog
