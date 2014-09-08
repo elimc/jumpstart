@@ -1,2 +1,3 @@
 #Ignore some unnescessary garbage.
 .DS_Store
+bower_components
