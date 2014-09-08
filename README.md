@@ -62,9 +62,14 @@ Authors
 -------
 
 **Eli McMakin**
+
 GitHub: https://github.com/elimc
+
 Web site: www.elimcmakin.com
 
+
 **Matt Jensen**
+
 GitHub: https://github.com/Matt-Jensen
+
 Web site: http://matthewjensen.co/
