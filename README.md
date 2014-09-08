@@ -17,6 +17,8 @@ Install
 
 If you don't know how to install this theme, then this is not the theme for you.
 
+After installing the theme into the themes directory, you can get Gulp working by entering "npm install" into the CLI, from the themes folder. Then you will follow the instructions located in gulpfle.js.
+
 TODO
 ----
 
@@ -26,11 +28,14 @@ TODO
 Changelog
 ---------
 
-### 0.4 (Sep 9, 2914)
-* Lots of little bug fixes and small feature enhancements
-* Better documentation
-* Added Foundation library
-* Added Bourbon library
+### 0.4.1 (Sep 7, 2014)
+* Node Modules folder removed. Node mules now installed with "npm install".
+
+### 0.4 (Sep 5, 2014)
+* Lots of little bug fixes and small feature enhancements.
+* Better documentation.
+* Added Foundation library.
+* Added Bourbon library.
 
 ### 0.3 (Aug 21, 2014)
 * Moved style.css contents to SASS files.
@@ -40,8 +45,8 @@ Changelog
 * Added a toggler module for toggling things.
 * Removed vestigial navigation.js.
 * Style additions.
-* Added icon option for Custom Post Type Class
-* Cleaned up and documented the Custom Post Type Class
+* Added icon option for Custom Post Type Class.
+* Cleaned up and documented the Custom Post Type Class.
 
 ### 0.1.2 (June 11, 2014)
 * Some grammer fixes.
@@ -53,11 +58,13 @@ Changelog
 ### 0.1 (June 18, 2014)
 * Initial Commit.
 
-Author
-------
+Authors
+-------
 
-Eli McMakin
-
+**Eli McMakin**
+GitHub: https://github.com/elimc
 Web site: www.elimcmakin.com
 
-GitHub: https://github.com/elimc
+**Matt Jensen**
+GitHub: https://github.com/Matt-Jensen
+Web site: http://matthewjensen.co/
