@@ -22,8 +22,9 @@
 
 require_once 'inc/custom-enque.php';                             // Enque theme scripts and styles.
 require_once 'inc/custom-functions.php';                         // Write any custom, theme specific functionality; a blank canvas ...
-require_once 'inc/custom-nav.php';                               // Register custom navigation menus.
+//require_once 'inc/custom-nav.php';                               // Register custom navigation menus.
 require_once 'inc/custom-template-tags.php';                     // Display information dynamically.
+require_once 'inc/clean-front-end.php';                          // Clean up WP junk code, on the front-end.
 require_once 'inc/custom-admin.php';                             // Customize the admin section.
 require_once 'inc/custom-utility-functions.php';                 // Add theme support and run some filters.
 require_once 'inc/advanced-custom-fields.php';                   // Call any custom ACF functions.
