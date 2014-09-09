@@ -8,18 +8,27 @@ This theme is built for those who are going to custom code their sites.
 About
 -----
 
-This theme comes out of the box with SASS, Gulp.js, CPT's, and many custom functions that I have put together over the years.
+This theme comes out of the box with:
+* SASS support
+* Automated Gulp.js build process, with BrowserSync for live-reloading CSS, JS, and PHP
+* Automatically generated Custom Post Types and Custom Post Taxonomy's
+* Foundation
+* Bourbon
+* Many custom functions that I have put together over the years
 
-Those who prefer CSS over SASS can throw out the node modules folder, gulp files, and SASS files. In your case, you will simply use style.css. Those using SASS will find Foundation and Bourbon packaged with the theme.
+Those who prefer CSS over SASS can throw out gulp files and SASS files. In your case, you will simply use `style.css`.
+
+Folder Structure
+----------------
+
+Coming soon.
 
 Install
 -------
 
-If you don't know how to install this theme, then this is not the theme for you.
+The Gulp build process is only for those who are major studmeisters:
 
-If you are a major studmeister:
-
-After installing the theme into the themes directory, you can get Gulp working by entering "npm install" into the CLI, from the themes folder. This will automatically load all of the required node_modules. Then you will follow the instructions located in gulpfle.js.
+After installing the theme into the themes directory, you can get the Gulp automated build process working by entering `npm install` into the CLI, from the themes folder. This will automatically load all of the required node modules. Finally, you will follow the instructions located in `gulpfle.js`.
 
 TODO
 ----
@@ -29,12 +38,13 @@ TODO
 Changelog
 ---------
 
-### 0.4.1 (Sep 7, 2014)
+### 0.5 (Sep 7, 2014)
 * Node Modules folder removed. Node mules now installed with "npm install".
 * Made sure Foundation and Bourbon were properly linked.
 * Added a sleek new Advanced Custom Fields menu for global options.
 * Created clean-front-end.php, to remove WP junk in header.
 * Added a blank favicon.ico (will not cause 404 errors). Just remember to add your own favicon.
+* Better documentation.
 
 ### 0.4 (Sep 5, 2014)
 * Lots of little bug fixes and small feature enhancements.
