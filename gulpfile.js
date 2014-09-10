@@ -18,6 +18,9 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     jsHint = require('gulp-jshint'),
     concat = require('gulp-concat'),
+    imagemin = require('gulp-imagemin'),
+    gm = require('gulp-gm'),
+    rename = require("gulp-rename"),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -28,6 +31,83 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
     jsWatch = './lib/js/**/*.js',
     jsDestination = '.',
     phpWatch = './**/*.php';
+
+
+/************************************************************************************************************************
+* Requires imagemagick & graphicsmagick. 
+* Install instructions here: https://github.com/scalableminds/gulp-gm
+*************************************************************************************************************************/
+
+
+var resizeFile = function(file, size, prefix) {
+    var detectPrefix = {
+        '2' : '@x4',
+        '1.5': '@x3',
+        '1' : '@x2', // Default should expect a retina size image
+        '0.5' : '', // Non retina device size
+        '0.25' : '@x0.5' // Mobile device size
+    }
+
+    if( !file || typeof file !== 'string' ) return;
+    
+    // If no size is provied set to default size
+    if( !size ) { size = 1; }
+
+    // If size object, then require both width and height, or revert to number
+    if( typeof size === 'object' ) {
+        if( !size.width && !size.height ) {
+            size = 1;
+        }
+        else if ( !size.width ) { // If no width use height value
+            size = size.height;
+        }
+        else if ( !size.height ) { // If no height use width value
+            size = size.width;
+        }
+    }
+
+    // Ensure all size input is an integer
+    if( size.width && (typeof size.width !== 'number') ) { size.width = parseFloat(size.width); }
+    if( size.height && (typeof size.height !== 'number') ) { size.height = parseFloat(size.height); }
+    if( typeof size === 'string' && typeof size !== 'object' ) { size = parseFloat(size); }
+
+    return gulp.src('lib/gulp-images/' + file)
+            .pipe(gm(function (gmfile, done) {
+                gmfile.size(function (err, original) {
+                    done(null, gmfile.resize(
+                        Math.floor(original.width * (size.width || size.height || size)),
+                        Math.floor(original.height * (size.height || size.width || size))
+                    ));
+                })
+            }))
+            .pipe(rename(function(path) {
+                var pfx = prefix
+                
+                if( !pfx ) { // Prefix undefined
+                    
+                    // if size is an object use width for prefix detection
+                    if( typeof size === 'object' && size.width ) { size = size.width; }
+                    
+                    // Convert number size to a string
+                    pfx = ( typeof size === 'number' ? size.toString() : size );
+
+                    // Detect prefix, if none applicable don't apply
+                    pfx = ( detectPrefix.hasOwnProperty( pfx ) ? detectPrefix[pfx] : '' );
+                }
+
+                path.basename += pfx;
+            }))
+            .pipe(imagemin({
+                progressive: true, // Lossless conversion of all jpg to progressive (Add's weight, but reduces percieved loading time)
+            }))
+            .pipe(gulp.dest('./lib/assets'));
+}
+
+gulp.task('img', function() {
+    resizeFile('cat-pwn.jpg'); // This is a retina image.  No resize occurs as resizeFile expects a retina image as input. @x2 suffix added to file.
+    resizeFile('cat-pwn.jpg', 0.5); // Normal device size
+    resizeFile('cat-pwn.jpg', 0.25 ); // Mobile device size
+});
 
 // Compile Sass file to CSS, and reload browser(s).
 gulp.task('sass', function() {
@@ -40,6 +120,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(sassDestination))
     .pipe(reload({stream:true}));
 });
+
 
 // Reload PHP pages.
 gulp.task('page-reload', function() {
@@ -59,6 +140,7 @@ gulp.task('script-tasks', function() {
             .pipe(concat('scripts.js'))
             .pipe(gulp.dest(jsDestination));
 });
+
 
 // Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
 gulp.task('default', function() {
