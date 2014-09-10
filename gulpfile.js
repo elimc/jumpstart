@@ -3,13 +3,15 @@
  * 
  * Instructions:
  * 1. Adjust the path of the browserSyncProxy variable below.
- * 2. Navigate to the root of your gulpfile.js file and enter "gulp" without the quotes.
- * 3. That's it!
+ * 2. Install the Wordpress Plugin "Browser Sync Filter".
+ * 3. Add "define('DEVENV', true);", without the quotes, to your wp-config.php file.
+ * 4. Navigate to the root of your gulpfile.js file and enter "gulp" without the quotes.
+ * 5. That's it!
  */
 
 // STEP 1
 // ADJUST THE FOLLOWING PATH TO THE ROOT OF YOUR gulpfile.js FILE:
-var browserSyncProxy = 'localhost/dev';
+var browserSyncProxy = null; // If === null browser sync is disabled!
 
 // Identify dependencies.
 var gulp = require('gulp'),
@@ -26,13 +28,6 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
     jsWatch = './lib/js/**/*.js',
     jsDestination = '.',
     phpWatch = './**/*.php';
-
-// Set the proxy. You followed Step 1, right?
-gulp.task('browser-sync', function () {
-    browserSync({
-        proxy: browserSyncProxy
-    });
-});
 
 // Compile Sass file to CSS, and reload browser(s).
 gulp.task('sass', function() {
@@ -56,19 +51,36 @@ gulp.task('page-reload', function() {
 gulp.task('script-tasks', function() {
     gulp.src('./lib/js/vendor/**/*.js')
         .pipe(concat('vendor.js'))
-        .pipe(gulp.dest(jsDestination))
+        .pipe(gulp.dest(jsDestination));
 
     return gulp.src('./lib/js/*.js')
             .pipe(jsHint())
             .pipe(jsHint.reporter('default'))
             .pipe(concat('scripts.js'))
-            .pipe(gulp.dest(jsDestination))
-            .pipe(reload({stream:true}));
+            .pipe(gulp.dest(jsDestination));
 });
 
 // Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
-gulp.task('default', ['browser-sync'], function() {
-    gulp.watch(sassWatch, ['sass']);
-    gulp.watch(phpWatch, ['page-reload']);
-    gulp.watch(jsWatch, ['script-tasks']);
+gulp.task('default', function() {
+    var sassTasks = ['sass'],
+        scriptTasks = ['script-tasks'],
+        phpTasks = [];
+
+    // If browserSync is enabled
+    if( browserSyncProxy ) {
+
+        // Set the proxy. You followed Step 1, right?
+        browserSync({
+            proxy: browserSyncProxy,
+        });
+
+        // Add page-reload task to all the other task lists.
+        [sassTasks, scriptTasks, phpTasks].forEach(function(tasks) {
+            tasks.push('page-reload');
+        });
+    }
+
+    gulp.watch(sassWatch, sassTasks);
+    gulp.watch(jsWatch, scriptTasks);
+    gulp.watch(phpWatch, phpTasks);
 });

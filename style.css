@@ -9,13 +9,15 @@ Version: 0.4.1
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Load Foundation and Bourbon
-2.0 - Load Foundation and Bourbon
-3.0 - Variables
-4.0 - Header
-5.0 - Footer
-6.0 - Font Page
-7.0 - Interior Page
+1. - Reset
+2. - Foundation Dependencies
+3. - Foundation
+4. - Foundation Plugins
+5. - Vendor Files
+6. - Theme Dependencies
+7. - Theme Classes
+8. - Theme Components
+9. - Technical Debt
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1. Reset
@@ -14251,7 +14253,7 @@ th.hide-for-touch {
 6. Theme Dependencies
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-4. Theme Classes
+7. Theme Classes
 --------------------------------------------------------------*/
 .l-top, .l-left, .l-bottom, .l-right {
   position: absolute; }
@@ -14306,8 +14308,8 @@ th.hide-for-touch {
 
 *****************************/
 /*--------------------------------------------------------------
-5. Theme Components
+8. Theme Components
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-6. Technical Debt
+9. Technical Debt
 --------------------------------------------------------------*/
