@@ -1,0 +1,130 @@
+// Foundation-Modifiers by Matt-Jensen, @madmattican
+// Matthewjensen.co
+// Licensed under MIT Open Source
+
+//
+
+// Table of Contents
+// Foundation-Modifier Settings
+//
+// a. Base Font Value
+// b. Virtical Heights
+// c. Modifier Queries
+// d. Font Families
+// e. Font Sizes
+// f. Font Colors
+
+
+
+// a. Base Font Value
+// ----------------------------------------
+
+// Get numeric value of $rem-base
+// $rem-base-val: strip-unit($rem-base);
+
+
+// Base font size at $medium-up resolution
+// $scaled-rem-base-val: $rem-base;
+
+
+
+// b. Virtical Heights
+// ----------------------------------------
+
+// $xsmall-baseline-val: 5;
+// $xsmall-baseline: convert-to-rem($xsmall-baseline-val);
+
+// $small-baseline-val: 8;
+// $small-baseline: convert-to-rem($small-baseline-val);
+
+// $default-baseline-val: 15;
+// $default-baseline: convert-to-rem($default-baseline-val);
+
+// $large-baseline-val: 30;
+// $large-baseline: convert-to-rem($large-baseline-val);
+
+// $xlarge-baseline-val: 40;
+// $xlarge-baseline: convert-to-rem($xlarge-baseline-val);
+
+// $xxlarge-baseline-val: 50;
+// $xxlarge-baseline: convert-to-rem($xxlarge-baseline-val);
+
+
+
+// c. Modifier Queries
+// ----------------------------------------
+
+// $mediaQueries: ($small-only, $medium-only, $medium-up, $large-only, $large-up);
+// $baselineRefs: "-small", "-medium", "-medium-up", "-large", "-large-up";
+
+
+
+// d. Font Families
+// ----------------------------------------
+
+// $sans-serif-font-family: $body-font-family;
+// $sans-serif-font-style: $body-font-style;
+// $sans-serif-font-weight: $body-font-weight;
+
+// $serif-font-family: Georgia, Times, "Times New Roman", serif;
+// $serif-font-style: normal;
+// $serif-font-weight: normal;
+
+
+
+// e. Font Sizes
+// ----------------------------------------
+
+// (Smaller Devices Only)
+// $font-size-xlarge-val: 24;
+// $font-size-xlarge: convert-to-rem($font-size-xlarge-val);
+
+// $font-size-large-val: 18;
+// $font-size-large: convert-to-rem($font-size-large-val);
+
+// $font-size-base-val: $rem-base-val;
+// $font-size-base: convert-to-rem($rem-base-val);
+
+// $font-size-small-val: 14;
+// $font-size-small: convert-to-rem($font-size-small-val);
+
+// $font-size-xsmall-val: 12;
+// $font-size-xsmall: convert-to-rem($font-size-xsmall-val);
+
+// (Larger Devices Only)
+// $scaled-font-size-xlarge-val: 27;
+// $scaled-font-size-xlarge: convert-to-rem($scaled-font-size-xlarge-val);
+
+// $scaled-font-size-large-val: 24;
+// $scaled-font-size-large: convert-to-rem($scaled-font-size-large-val);
+
+// $scaled-font-size-base-val: $scaled-rem-base-val;
+// $scaled-font-size-base: convert-to-rem($scaled-rem-base-val);
+
+// $scaled-font-size-small-val: 16;
+// $scaled-font-size-small: convert-to-rem($scaled-font-size-small-val);
+
+// $scaled-font-size-xsmall-val: 13;
+// $scaled-font-size-xsmall: convert-to-rem($scaled-font-size-xsmall-val);
+
+
+
+// f. Font Colors
+// ----------------------------------------
+
+// Main Font Colors 
+// Don't overwrite foundation's colors if present. (Backwards compatibility)
+// $white: #fff !default;
+// $black: $body-font-color !default;
+
+// Gray Scale Colors
+// $gray: grayscale($primary-color);
+// $gray-90: lighten($gray, 10);
+// $gray-80: lighten($gray, 20);
+// $gray-70: lighten($gray, 30);
+// $gray-60: lighten($gray, 40);
+// $gray-50: lighten($gray, 50);
+// $gray-40: lighten($gray, 60);
+// $gray-30: lighten($gray, 70);
+// $gray-20: lighten($gray, 80);
+// $gray-10: lighten($gray, 90);
