@@ -3,14 +3,14 @@
 // IE9+ Only
 @mixin vertical-center($pos:relative, $top: 50%, $noFlex: true) {
   @if $noFlex {
-	// Center using transform
+    // Center using transform
   	position: $pos;
   	top: $top;
   	-moz-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   @else {
   	// Center using flexbox
@@ -33,12 +33,11 @@
 
   @media
     #{"only screen " + $query + " and (-webkit-min-device-pixel-ratio: " + $density + ")"},
-    #{"only screen " + $query + " and (min-resolution: " + $dpi + "dpi)"},
+    #{"only screen " + $query + " and (min-resolution: " + $dpi + "dpi)"}, // "
     #{"only screen " + $query + " and (min-resolution: " + $density + "dppx)"} {
       @content;
     }
 }
-// "
 
 @function debug($list) {
     // We open the bracket

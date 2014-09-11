@@ -117,8 +117,7 @@ gulp.task('sass', function() {
             errLogToConsole: true
         }
     ))
-    .pipe(gulp.dest(sassDestination))
-    .pipe(reload({stream:true}));
+    .pipe(gulp.dest(sassDestination));
 });
 
 
