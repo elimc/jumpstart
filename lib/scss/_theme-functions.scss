@@ -1,0 +1,70 @@
+// Functions used throughout your theme .scss files
+
+// IE9+ Only
+@mixin vertical-center($pos:relative, $top: 50%, $noFlex: true) {
+  @if $noFlex {
+    // Center using transform
+  	position: $pos;
+  	top: $top;
+  	-moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else {
+  	// Center using flexbox
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+}
+
+@mixin retina($query: null, $density: 2) {
+  $dpi: $density * 96;
+  
+  /* Accepts additional @media query conditions */
+  @if $query {
+    $query: "and (#{$query})";
+  }
+  @else {
+    $query: "";
+  }
+
+  @media
+    #{"only screen " + $query + " and (-webkit-min-device-pixel-ratio: " + $density + ")"},
+    #{"only screen " + $query + " and (min-resolution: " + $dpi + "dpi)"}, // "
+    #{"only screen " + $query + " and (min-resolution: " + $density + "dppx)"} {
+      @content;
+    }
+}
+
+@function debug($list) {
+    // We open the bracket
+    $result: "[ ";
+
+    // For each item in list
+    @each $item in $list {
+        // We test its length
+        // If it's more than one item long
+        @if length($item) > 1 {
+            // We deal with a nested list
+            $result: $result + debug($item);
+        }
+        // Else we append the item to $result
+        @else {
+            $result: $result + $item;
+        }
+
+        // If we are not dealing with the last item of the list
+        // We add a comma and a space
+        @if index($list, $item) != length($list) {
+            $result: $result + ", ";
+        }
+    }
+
+    // We close the bracket
+    // And return the string
+    $result: $result + " ]";
+    @return quote($result);
+}
