@@ -16,8 +16,8 @@
 
     <meta name="viewport" content="width=device-width">
 
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/apple-touch-icon.png">
 
 <?php wp_head(); ?>
 </head>

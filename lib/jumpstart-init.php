@@ -10,11 +10,12 @@
  *
  * Folder structure
  *
- * assets       -       Theme specific assets, i.e. sprites, images, etc ...
+ * assets       -       Theme specific assets, e.g., sprites, images, etc ...
+ * branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
  * fonts        -       Any web fonts to be loaded locally.
  * inc          -       All classes and function files.
  * js           -       All js files.
- * scss         -       SASS files, and partials.
+ * scss         -       SASS files and partials.
  *
  */
 
