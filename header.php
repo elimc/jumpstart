@@ -1,17 +1,23 @@
 <?php
 /**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
+ * jumpstart needs a header.
  */
 ?><!DOCTYPE html>
-<html lang="en-US">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
     <title><?php wp_title( '|', true, 'right' ); ?></title>
 
+    <meta name="viewport" content="width=device-width">
+
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
 
 <?php wp_head(); ?>
 </head>
