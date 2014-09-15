@@ -7,13 +7,6 @@
 
 
 
-// This theme uses wp_nav_menu() in one location. Feel free to register more menus.
-register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'jumpstart' ),
-) );
-
-
-
 /**
  * Make Read More link actually link to the post.
  *

@@ -3,12 +3,14 @@
  * The template for displaying the footer.
  *
  * Contains the closing of the #content div and all content after
- *
- * @package _s
  */
 ?>
 
     <footer>
+        <nav>
+			<?php wp_nav_menu( array( 'theme_location' => 'footer_menu' ) ); ?>
+		</nav><!-- nav -->
+
         This is the footer content.
     </footer><!-- footer -->
 
