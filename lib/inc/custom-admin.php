@@ -11,7 +11,7 @@
 function jumpstart_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/lib/assets/login-logo.png);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/login-logo.png);
             width: 80px;
         }
     </style>
@@ -45,6 +45,17 @@ add_filter( 'login_headertitle', 'jumpstart_login_logo_url_title' );
 
 
 /**
+ * Redirect to home page on logout
+ */
+function go_home() {
+    wp_redirect( home_url() );
+    exit();
+}
+add_action( 'wp_logout','go_home' );
+
+
+
+/**
  * Remove clutter from main dashboard page.
  *
  * @link http://codex.wordpress.org/Dashboard_Widgets_API Turn off meta boxes.
@@ -61,7 +72,7 @@ function jumpstart_disable_default_dashboard_widgets() {
 //        remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
 //        remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 }
-add_action('wp_dashboard_setup', 'jumpstart_disable_default_dashboard_widgets');
+add_action( 'wp_dashboard_setup', 'jumpstart_disable_default_dashboard_widgets' );
 
 
 
@@ -76,7 +87,7 @@ function jumpstart_remove_submenus() {
 //    remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
 //    remove_submenu_page( 'tools.php', 'tools.php' );
 }
-add_action('admin_menu', 'jumpstart_remove_submenus', 999);
+add_action( 'admin_menu', 'jumpstart_remove_submenus', 999 );
 
 
 
