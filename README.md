@@ -38,6 +38,11 @@ TODO
 Changelog
 ---------
 
+### 0.5.1 (Sep 15, 2014)
+* Added site branding information.
+* Code refactoring.
+* Navigation improvements.
+
 ### 0.5 (Sep 7, 2014)
 * Node Modules folder removed. Node mules now installed with "npm install".
 * Made sure Foundation and Bourbon were properly linked.
