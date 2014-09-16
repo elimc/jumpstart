@@ -38,6 +38,9 @@ TODO
 Changelog
 ---------
 
+### 0.5.2
+* Added a constants section.
+
 ### 0.5.1 (Sep 15, 2014)
 * Added site branding information.
 * Code refactoring.
