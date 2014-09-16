@@ -38,7 +38,7 @@ TODO
 Changelog
 ---------
 
-### 0.5.2
+### 0.5.2 (Sep 16, 2014)
 * Added a constants section.
 
 ### 0.5.1 (Sep 15, 2014)
