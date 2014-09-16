@@ -21,6 +21,7 @@
 
 
 
+require_once 'inc/constants.php';                                // Define constants, before you do anything else.
 require_once 'inc/custom-enque.php';                             // Enque theme scripts and styles.
 require_once 'inc/custom-functions.php';                         // Write any custom, theme specific functionality; a blank canvas ...
 require_once 'inc/custom-nav.php';                               // Register custom navigation menus.
@@ -30,4 +31,4 @@ require_once 'inc/custom-admin.php';                             // Customize th
 require_once 'inc/custom-utility-functions.php';                 // Add theme support and run some filters.
 //require_once 'inc/advanced-custom-fields.php';                   // Call any custom ACF functions.
 //require_once 'inc/cpt-init.php';                                 // Magically load any Custom Posts Types and Custom Taxonomies.
-//require_once 'inc/responsive-content.php';						 // Logic related to generating responsive content.
+//require_once 'inc/responsive-content.php';					   // Logic related to generating responsive content.

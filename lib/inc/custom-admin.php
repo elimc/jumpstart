@@ -118,6 +118,6 @@ add_action( 'admin_menu', 'jumpstart_remove_menus', 999 );
  * @link http://wp.tutsplus.com/articles/12-useful-customization-and-branding-tweaks-for-the-wordpress-dashboard/ Change admin WP branding.
  */
 function jumpstart_modify_footer_admin() {
-    echo 'Created by <a href="http://elimcmakin.com/">Eli McMakin</a>.';
+    echo 'Created by <a href="' . AUTHOR_SITE . '">' . AUTHOR . '</a>.';
 }
 add_filter( 'admin_footer_text', 'jumpstart_modify_footer_admin' );
