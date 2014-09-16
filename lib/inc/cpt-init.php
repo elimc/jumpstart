@@ -10,8 +10,8 @@
  *
  * The load_template() function imports certain gloabal vars; it's like require_once() on steroids.
  */
-load_template( get_stylesheet_directory() . '/lib/inc/CPT/CustomPost.php' );
-load_template( get_stylesheet_directory() . '/lib/inc/CPT/CustomTaxonomy.php' );
+load_template( LIB . '/inc/CPT/CustomPost.php' );
+load_template( LIB() . '/inc/CPT/CustomTaxonomy.php' );
 
 
 

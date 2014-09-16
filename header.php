@@ -10,8 +10,8 @@
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/favicon.ico">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?php echo LIB; ?>branding/favicon.ico">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo LIB; ?>branding/apple-touch-icon.png">
 <?php wp_head(); ?>
 </head>
 

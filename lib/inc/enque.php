@@ -10,7 +10,7 @@ function jumpstart_scripts() {
 	wp_enqueue_style( 'jumpstart-style', get_stylesheet_uri(), array( 'dashicons' ) );
 
     // Load Base Foundation JS.
-    wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/lib/foundation/js/foundation/foundation.js', array( 'jquery' ), '1.0', TRUE );
+    wp_enqueue_script( 'foundation', LIB . '/foundation/js/foundation/foundation.js', array( 'jquery' ), '1.0', TRUE );
 
     // Foundation Modules
     //wp_enqueue_script( 'foundation-abide', get_stylesheet_directory_uri() . '/lib/foundation/js/foundation/foundation.abide.js', array( 'jquery' ), '1.0', TRUE );
@@ -31,9 +31,9 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-toolbar', get_stylesheet_directory_uri() . '/lib/foundation/js/foundation/foundation.toolbar.js', array( 'jquery' ), '1.0', TRUE );
 
     // All vendor scripts in lib/js/vendor
-    wp_enqueue_script( 'vendor-scripts', get_stylesheet_directory_uri() . '/vendor.js', array('jquery', 'foundation'), '1.0', TRUE );
+    wp_enqueue_script( 'vendor-scripts', LIB . '/vendor.js', array('jquery', 'foundation'), '1.0', TRUE );
 
     // All custom scripts in lib/js
-    wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/scripts.js', array('jquery', 'foundation', 'vendor-scripts'), '1.0', TRUE );
+    wp_enqueue_script( 'custom-scripts', LIB . '/scripts.js', array('jquery', 'foundation', 'vendor-scripts'), '1.0', TRUE );
 }
 add_action( 'wp_enqueue_scripts', 'jumpstart_scripts' );
