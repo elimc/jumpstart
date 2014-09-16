@@ -6,19 +6,12 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-
-    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-    Remove this if you use the .htaccess -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
-
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/favicon.ico">
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/apple-touch-icon.png">
-
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/apple-touch-icon.png">
 <?php wp_head(); ?>
 </head>
 
