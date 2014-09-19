@@ -29,14 +29,11 @@ Install
 The Gulp build process is only for those who are major studmeisters:
 
 Instructions:
+
 1. Adjust the path of the browserSyncProxy variable in gulpfile.js.
-
 2. Using the CLI, navigate to the root of your gulpfile.js file and enter "npm install" without the quotes.
-
 3. Wait for the node_modules to automatically install.
-
 4. Enter "gulp" in the CLI, without the quotes.
-
 5. That's it!
 
 TODO
