@@ -3,8 +3,10 @@
  * 
  * Instructions:
  * 1. Adjust the path of the browserSyncProxy variable below.
- * 2. Navigate to the root of your gulpfile.js file and enter "gulp" without the quotes.
- * 3. That's it!
+ * 2. Using the CLI, navigate to the root of your gulpfile.js file and enter "npm install" without the quotes.
+ * 3. Wait for the node_modules to automatically install.
+ * 4. Enter "gulp" in the CLI, without the quotes.
+ * 5. That's it!
  */
 
 // STEP 1
