@@ -1,9 +1,7 @@
 **jumpstart**
 ===========================
 
-A simple starter theme for WordPress. It is simpler and cleaner than the _s theme from WordPress, yet it has much more functionality, and a more sophisticated build process.
-
-This theme is built for those who are going to custom code their sites.
+A sophisticated starter theme for Developers who build custom WordPress themes. It takes many good features from `underscores`, `JointsWP`, and many custom things I have learned building WordPress sites over the last few years.
 
 About
 -----
