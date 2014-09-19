@@ -9,9 +9,14 @@
  * 5. That's it!
  */
 
-// STEP 1
-// ADJUST THE FOLLOWING PATH TO THE ROOT OF YOUR gulpfile.js FILE:
-var browserSyncProxy = '127.0.0.1/jstest/'; // If === null browser sync is disabled!
+
+
+/**
+ * STEP 1
+ * Adjust the browserSyncProxy var to the root of your gulpfile.js.
+ * e.g., if your WP install is located on your local server in a folder called Jumpstart, you would enter 127.0.0.1/jumpstart/ below.
+ */
+var browserSyncProxy = null; // If === null browser sync is disabled!
 
 // Identify dependencies.
 var gulp = require('gulp'),
@@ -34,10 +39,11 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
 
 
 
-/************************************************************************************************************************
-* Requires imagemagick & graphicsmagick. 
-* Install instructions here: https://github.com/scalableminds/gulp-gm
-*************************************************************************************************************************/
+/**
+ * The following will automatically resize your images for different resolutions.
+ * Turned off by default, because it requires imagemagick & graphicsmagick. 
+ * Install instructions here: https://github.com/scalableminds/gulp-gm
+ */
 //var resizeFile = function(file, size, prefix) {
 //    var detectPrefix = {
 //        '2' : '@x4',
@@ -102,6 +108,11 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
 //            .pipe(gulp.dest('./lib/assets'));
 //};
 
+
+
+/**
+ * Enter "gulp img", without the quotes, to resize files for mobile.
+ */
 //gulp.task('img', function() {
 //    resizeFile('cat-pwn.jpg'); // This is a retina image.  No resize occurs as resizeFile expects a retina image as input. @x2 suffix added to file.
 //    resizeFile('cat-pwn.jpg', 0.5); // Normal device size
@@ -109,16 +120,14 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
 //});
 
 
+
 // Compile Sass file to CSS, and updates browsers.
 gulp.task('sass', function() {
     return gulp.src(sassSource)
-    .pipe(sass(
-        {
-            errLogToConsole: true
-        }
-    ))
+    .pipe(sass( {errLogToConsole: true} ))
     .pipe(gulp.dest(sassDestination));
 });
+
 
 
 // Reload Web page.
@@ -128,7 +137,8 @@ gulp.task('page-reload', function() {
 });
 
 
-// Updates JS code to browser.
+
+// Concatenates and lints scripts, updates resulting JS code to browser.
 gulp.task('script-tasks', function() {
     gulp.src('./lib/js/vendor/**/*.js')
         .pipe(concat('vendor.js'))
@@ -142,26 +152,19 @@ gulp.task('script-tasks', function() {
 });
 
 
+
 // Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
 gulp.task('default', ['sass'], function() {
-//    var sassTasks = ['sass'],
-//        scriptTasks = ['script-tasks'],
-//        phpTasks = [];
 
     // If browserSync is enabled
     if( browserSyncProxy ) {
-
         // Set the proxy. You followed Step 1, right?
         browserSync({
             proxy: browserSyncProxy
         });
-
-        // Add page-reload task to all the other task lists.
-//        [sassTasks, scriptTasks, phpTasks].forEach(function(tasks) {
-//            tasks.push('page-reload');
-//        });
     }
 
+    // Call specific functions when specific file is updated and saved.
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(jsWatch, ['script-tasks']);
     gulp.watch(phpWatch, ['page-reload']);

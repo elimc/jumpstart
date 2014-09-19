@@ -1,9 +1,7 @@
 **jumpstart**
 ===========================
 
-A simple starter theme for WordPress. It is simpler and cleaner than the _s theme from WordPress, yet it has much more functionality, and a more sophisticated build process.
-
-This theme is built for those who are going to custom code their sites.
+A modern WordPress theme with a sophisticated build process. Inspiration is taken from JointsWP, Underscores, and numerous lessons I have picked up over the years.
 
 About
 -----
@@ -30,10 +28,10 @@ The Gulp build process is only for those who are major studmeisters:
 
 Instructions:
 
-1. Adjust the path of the browserSyncProxy variable in gulpfile.js.
-2. Using the CLI, navigate to the root of your gulpfile.js file and enter "npm install" without the quotes.
+1. Adjust the path of the browserSyncProxy variable in `gulpfile.js`.
+2. Using the CLI, navigate to the root of your gulpfile.js file and enter `npm install`.
 3. Wait for the node_modules to automatically install.
-4. Enter "gulp" in the CLI, without the quotes.
+4. Enter `gulp` in the CLI, without the quotes.
 5. That's it!
 
 TODO
@@ -43,6 +41,10 @@ TODO
 
 Changelog
 ---------
+### 0.5.4 (Sep 19, 2014)
+* Changed browsersync to be defaulted to off.
+* Cleaned gulpfile.js
+
 ### 0.5.3 (Sep 19, 2014)
 * Made gulpfile.js faster and less fragile.
 
