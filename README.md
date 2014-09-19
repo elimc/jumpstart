@@ -43,7 +43,7 @@ Changelog
 ---------
 ### 0.5.4 (Sep 19, 2014)
 * Changed browsersync to be defaulted to off.
-* Cleaned gulpfile.js
+* Cleaned gulpfile.js.
 
 ### 0.5.3 (Sep 19, 2014)
 * Made gulpfile.js faster and less fragile.
