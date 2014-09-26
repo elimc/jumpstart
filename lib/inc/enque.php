@@ -6,7 +6,8 @@
  * @link http://codex.wordpress.org/Function_Reference/wp_enqueue_script Enque scripts.
  */
 function jumpstart_scripts() {
-    //Load stylesheed with dashicons as a dependency.
+    // Load stylesheed with dashicons as a dependency.
+    // Learn about dashicons: http://melchoyce.github.io/dashicons/
 	wp_enqueue_style( 'jumpstart-style', get_stylesheet_uri(), array( 'dashicons' ) );
 
     // Load Base Foundation JS.

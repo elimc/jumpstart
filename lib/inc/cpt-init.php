@@ -10,8 +10,8 @@
  *
  * The load_template() function imports certain gloabal vars; it's like require_once() on steroids.
  */
-load_template( LIB . '/inc/CPT/CustomPost.php' );
-load_template( LIB() . '/inc/CPT/CustomTaxonomy.php' );
+require_once( 'CPT/CustomPost.php' );
+require_once( 'CPT/CustomTaxonomy.php' );
 
 
 
@@ -26,6 +26,8 @@ $custom_taxonomy = new jumpstart\CustomTaxonomy( 'jumpstart' );
 // List of menu icons: http://melchoyce.github.io/dashicons/
 $custom_post->make( 'sample', 'Sample Post', 'Sample Posts', array ( 'menu_icon' => 'dashicons-admin-media' ) );
 //$custom_post->make( 'sample2', 'Sample Post2', 'Sample Posts2' );
+
+
 
 // Instantiate a Custom Taxonomy, that can be related to the Custom Post Type.
 $custom_taxonomy->make( 'sample-taxonomy', 'Sample Taxonomy', 'Sample Taxonomies', array( 'sample' ) );
