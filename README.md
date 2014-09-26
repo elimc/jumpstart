@@ -1,7 +1,7 @@
 **jumpstart**
 ===========================
 
-A modern WordPress theme with a sophisticated build process. Inspiration is taken from JointsWP, Underscores, and numerous lessons I have picked up over the years.
+A modern WordPress theme with a sophisticated build process. Inspiration is taken from JointsWP, Underscores, and numerous things I have learned over the years.
 
 About
 -----
@@ -31,7 +31,7 @@ Instructions:
 1. Adjust the path of the browserSyncProxy variable in `gulpfile.js`.
 2. Using the CLI, navigate to the root of your gulpfile.js file and enter `npm install`.
 3. Wait for the node_modules to automatically install.
-4. Enter `gulp` in the CLI, without the quotes.
+4. Enter `gulp` in the CLI. This will start the node server.
 5. That's it!
 
 TODO
@@ -41,6 +41,10 @@ TODO
 
 Changelog
 ---------
+### 0.5.5 (Sep 25, 2014)
+* Fixed error with requiring CPTs.
+* Better documentation.
+
 ### 0.5.4 (Sep 19, 2014)
 * Changed browsersync to be defaulted to off.
 * Cleaned gulpfile.js.
