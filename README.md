@@ -12,6 +12,8 @@ This theme comes out of the box with:
 * Automatically generated Custom Post Types and Custom Post Taxonomy's
 * Foundation
 * Bourbon
+* Modernizr
+* Utility Belt Library to improve Foundation
 * Many custom functions that I have put together over the years
 
 Those who prefer CSS over SASS can throw out gulp files and SASS files. In your case, you will simply use `style.css`.
@@ -41,6 +43,14 @@ TODO
 
 Changelog
 ---------
+### 0.6 (Nov 7, 2014)
+* Updated JS structure to align more closely with proper Foundation structure.
+* Included utility belt submodule that improves foundation.
+* Included modernizr.
+* Foundation updated to 5.4.6.
+* Added placeholder pollyfill for old browser support.
+* FastClick is now a default, for faster mobile clicking.
+
 ### 0.5.5 (Sep 25, 2014)
 * Fixed error with requiring CPTs.
 * Better documentation.
