@@ -21,7 +21,13 @@ Those who prefer CSS over SASS can throw out gulp files and SASS files. In your 
 Folder Structure
 ----------------
 
-Coming soon.
+ * branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
+ * fonts        -       Any web fonts to be loaded locally.
+ * foundation   -       Foundation Framework.
+ * images       -       All images to be used in the site. These images aren't related to the companies branding.
+ * inc          -       All PHP classes and function files.
+ * js           -       All custom js files.
+ * scss         -       All cutom SASS files and partials.
 
 Install
 -------
@@ -43,6 +49,9 @@ TODO
 
 Changelog
 ---------
+### 0.6.1 (Nov 11, 2014)
+* Fixed a lot of little bugs and formatting issues.
+
 ### 0.6 (Nov 7, 2014)
 * Updated JS structure to align more closely with proper Foundation structure.
 * Included utility belt submodule that improves foundation.
