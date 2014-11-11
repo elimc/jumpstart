@@ -38,8 +38,8 @@ Instructions:
 
 1. Adjust the path of the browserSyncProxy variable in `gulpfile.js`.
 2. Using the CLI, navigate to the root of your gulpfile.js file and enter `npm install`.
-3. Wait for the node_modules to automatically install.
-4. Enter `gulp` in the CLI. This will start the node server.
+3. Wait for the node_modules to automatically install. Once installed, you won't have to run `npm install` for this site in the future.
+4. Enter `gulp` in the CLI, without the quotes. This will start your node server, along with automattic SASS compiling.
 5. That's it!
 
 TODO

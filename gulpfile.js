@@ -4,8 +4,8 @@
  * Instructions:
  * 1. Adjust the path of the browserSyncProxy variable below.
  * 2. Using the CLI, navigate to the root of your gulpfile.js file and enter "npm install" without the quotes.
- * 3. Wait for the node_modules to automatically install.
- * 4. Enter "gulp" in the CLI, without the quotes.
+ * 3. Wait for the node_modules to automatically install. Once installed, you won't have to run "npm install" for this site in the future.
+ * 4. Enter "gulp" in the CLI, without the quotes. This will start your node server, along with automattic SASS compiling.
  * 5. That's it!
  */
 
@@ -14,9 +14,10 @@
 /**
  * STEP 1
  * Adjust the browserSyncProxy var to the root of your gulpfile.js.
- * e.g., if your WP install is located on your local server in a folder called Jumpstart, you would enter 127.0.0.1/jumpstart/ below.
+ * e.g., if your WP install is located on your local server in a folder called Jumpstart, 
+ * you would enter "127.0.0.1/jumpstart/wordpress/" with the quotes around it.
  */
-var browserSyncProxy = null; // If === null browser sync is disabled!
+var browserSyncProxy = null; // If === null, browser sync is disabled!
 
 // Identify dependencies.
 var gulp = require('gulp'),
@@ -40,7 +41,8 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
 gulp.task('sass', function() {
     return gulp.src(sassSource)
     .pipe(sass( {errLogToConsole: true} ))
-    .pipe(gulp.dest(sassDestination));
+    .pipe(gulp.dest(sassDestination))
+    .pipe(reload({stream:true}));
 });
 
 
