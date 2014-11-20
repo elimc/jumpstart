@@ -21,20 +21,24 @@ Those who prefer CSS over SASS can throw out gulp files and SASS files. In your 
 Folder Structure
 ----------------
 
- * branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
- * fonts        -       Any web fonts to be loaded locally.
- * foundation   -       Foundation Framework.
- * images       -       All images to be used in the site. These images aren't related to the companies branding.
- * inc          -       All PHP classes and function files.
- * js           -       All custom js files.
- * scss         -       All cutom SASS files and partials.
+– lib           -       All of the custom functionality of the site.
+ |
+  – branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
+  – fonts        -       Any web fonts to be loaded locally.
+  – foundation   -       Foundation Framework.
+  – images       -       All images to be used in the site. These images aren't related to the companies branding.
+  – inc          -       All PHP classes and function files.
+  – js           -       All custom js files.
+  – scss         -       All cutom SASS files and partials.
 
 Install
 -------
 
-The Gulp build process is only for those who are major studmeisters:
+Download `jumpstart` into your themes directory. Use it for your awesome projects.
 
-Instructions:
+`jumpstart` works best with Gulp. The Gulp build process is only for those who are major studmeisters:
+
+Gulp Instructions:
 
 1. Adjust the path of the browserSyncProxy variable in `gulpfile.js`.
 2. Using the CLI, navigate to the root of your gulpfile.js file and enter `npm install`.
@@ -45,10 +49,14 @@ Instructions:
 TODO
 ----
 
-* More cowbell.
+* Encode self-awareness.
 
 Changelog
 ---------
+### 0.6.2 (Nov 19, 2014)
+* Re-enabled bourbon.
+* JS scripts live-reload.
+
 ### 0.6.1 (Nov 11, 2014)
 * Fixed a lot of little bugs and formatting issues.
 

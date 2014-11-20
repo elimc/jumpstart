@@ -4,7 +4,7 @@ Theme URI: https://github.com/elimc/jumpstart/
 Author: Eli McMakin
 Author URI: http://elimcmakin.com
 Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
-Version: 0.5.5
+Version: 0.6.2
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -346,6 +346,7 @@ td, th {
 /*--------------------------------------------------------------
 2. Foundation Dependencies
 --------------------------------------------------------------*/
+/*@import "foundation/functions";*/
 /*--------------------------------------------------
 * Example Of Declaring Fonts Using Bourbon Enabled
 ----------------------------------------------------

@@ -4,7 +4,7 @@ Theme URI: https://github.com/elimc/jumpstart/
 Author: Eli McMakin
 Author URI: http://elimcmakin.com
 Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
-Version: 0.6
+Version: 0.6.2
 */
 
 /*--------------------------------------------------------------
@@ -51,7 +51,7 @@ Version: 0.6
 5. Vendor Files
 --------------------------------------------------------------*/
 // Uncomment the Bourbon line to use Bourbon SASS in the project.
-// @import "../../node_modules/node-bourbon/assets/stylesheets/bourbon";
+@import "../../node_modules/node-bourbon/assets/stylesheets/bourbon";
 
 /*--------------------------------------------------------------
 6. Theme Dependencies

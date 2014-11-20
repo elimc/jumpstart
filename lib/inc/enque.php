@@ -11,12 +11,12 @@ function jumpstart_scripts() {
 	wp_enqueue_style( 'jumpstart-style', get_stylesheet_uri(), array( 'dashicons' ) );
     // wp_enqueue_style( 'slick-carousel-style', LIB . '/bower_components/slick-carousel/slick/slick.css', array( 'jquery' ), '1.0', TRUE );
 
-    wp_enqueue_script('modernizr', LIB . '/foundation/js/vendor/modernizr.js', array(), '2.8.3', FALSE);
+    //wp_enqueue_script('modernizr', LIB . '/foundation/js/vendor/modernizr.js', array(), '2.8.3', FALSE);
 
     // Load Base Foundation JS.
     wp_enqueue_script( 'foundation', LIB . '/foundation/js/foundation/foundation.js', array( 'jquery' ), '1.0', TRUE );
-    wp_enqueue_script( 'fastClick', LIB . '/foundation/js/vendor/fastclick.js', array(), '1.0', TRUE );
-    wp_enqueue_script( 'placeholder', LIB . '/foundation/js/vendor/placeholder.js', array('jquery'), '2.0.8', TRUE );
+    //wp_enqueue_script( 'fastClick', LIB . '/foundation/js/vendor/fastclick.js', array(), '1.0', TRUE );
+    //wp_enqueue_script( 'placeholder', LIB . '/foundation/js/vendor/placeholder.js', array('jquery'), '2.0.8', TRUE );
 
     // Foundation Modules
     //wp_enqueue_script( 'foundation-abide', LIB . '/foundation/js/foundation/foundation.abide.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
@@ -37,9 +37,9 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.toolbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 
     // All vendor scripts in lib/js/vendor
-    wp_enqueue_script( 'vendor-scripts', get_stylesheet_directory_uri() . '/vendor.js', array('jquery', 'foundation'), '1.0', TRUE );
+    //wp_enqueue_script( 'vendor-scripts', get_stylesheet_directory_uri() . '/vendor.js', array('jquery', 'foundation'), '1.0', TRUE );
 
     // All custom scripts in lib/js
-    wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/scripts.js', array('jquery', 'foundation', 'vendor-scripts'), '1.0', TRUE );
+    //wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/scripts.js', array('jquery', 'foundation', 'vendor-scripts'), '1.0', TRUE );
 }
 add_action( 'wp_enqueue_scripts', 'jumpstart_scripts' );

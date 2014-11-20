@@ -25,6 +25,7 @@ var gulp = require('gulp'),
     jsHint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     rename = require("gulp-rename"),
+    bourbon = require('node-bourbon'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -40,7 +41,10 @@ var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
 // Compile Sass file to CSS, and updates browsers.
 gulp.task('sass', function() {
     return gulp.src(sassSource)
-    .pipe(sass( {errLogToConsole: true} ))
+    .pipe(sass({
+        includePaths: require('node-bourbon').includePaths,
+        errLogToConsole: true
+    }))
     .pipe(gulp.dest(sassDestination))
     .pipe(reload({stream:true}));
 });
@@ -65,7 +69,8 @@ gulp.task('script-tasks', function() {
             .pipe(jsHint())
             .pipe(jsHint.reporter('default'))
             .pipe(concat('scripts.js'))
-            .pipe(gulp.dest(jsDestination));
+            .pipe(gulp.dest(jsDestination))
+            .pipe(reload({stream:true}));
 });
 
 
