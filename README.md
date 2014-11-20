@@ -21,15 +21,15 @@ Those who prefer CSS over SASS can throw out gulp files and SASS files. In your 
 Folder Structure
 ----------------
 
-– lib           -       All of the custom functionality of the site.
- |
-  – branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
-  – fonts        -       Any web fonts to be loaded locally.
-  – foundation   -       Foundation Framework.
-  – images       -       All images to be used in the site. These images aren't related to the companies branding.
-  – inc          -       All PHP classes and function files.
-  – js           -       All custom js files.
-  – scss         -       All cutom SASS files and partials.
+ * lib           -       All of the custom functionality of the site.
+
+    * branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
+    * fonts        -       Any web fonts to be loaded locally.
+    * foundation   -       Foundation Framework.
+    * images       -       All images to be used in the site. These images aren't related to the companies branding.
+    * inc          -       All PHP classes and function files.
+    * js           -       All custom js files.
+    * scss         -       All cutom SASS files and partials.
 
 Install
 -------
