@@ -31,7 +31,6 @@ Version: 0.6.2
 --------------------------------------------------------------*/
 // Uncomment to customize Zurb Foundation For Sites
 @import 'settings';
-@import 'fonts';
 
 /*--------------------------------------------------------------
 3. Foundation
@@ -56,6 +55,7 @@ Version: 0.6.2
 /*--------------------------------------------------------------
 6. Theme Dependencies
 --------------------------------------------------------------*/
+@import 'fonts';
 @import 'theme-functions';
 @import 'theme-settings';
 
