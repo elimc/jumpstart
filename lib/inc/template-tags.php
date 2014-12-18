@@ -116,29 +116,25 @@ if ( ! function_exists( 'jumpstart_post_nav' ) ) {
  */
 if ( ! function_exists( 'jumpstart_posted_on' ) ) {
     function jumpstart_posted_on() {
-        $time_string = '<time datetime="%1$s">%2$s</time>';
+        $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-            $time_string .= '<time datetime="%3$s">%4$s</time>';
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
         }
-
-        $time_string_formatted = sprintf( $time_string,
+        $time_string = sprintf( $time_string,
             esc_attr( get_the_date( 'c' ) ),
             esc_html( get_the_date() ),
             esc_attr( get_the_modified_date( 'c' ) ),
             esc_html( get_the_modified_date() )
         );
-
         $posted_on = sprintf(
-            _x( 'Posted on %s', 'post date', 'jumpstart' ),
-            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string_formatted . '</a>'
+            _x( 'Posted on %s', 'post date', '_s' ),
+            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
         );
-
         $byline = sprintf(
-            _x( 'by %s', 'post author', 'jumpstart' ),
-            '<span><a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+            _x( 'by %s', 'post author', '_s' ),
+            '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
         );
-
-        echo '<span>' . $posted_on . '</span><span> ' . $byline . '</span>';
+        echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
     }
 }
 
