@@ -14,8 +14,8 @@
 /**
  * STEP 1
  * Adjust the browserSyncProxy var to the root of your gulpfile.js.
- * e.g., if your WP install is located on your local server in a folder called Jumpstart, 
- * you would enter "127.0.0.1/jumpstart/wordpress/" with the quotes around it.
+ * e.g., if your WP install is located on your local server in a folder called jump_start, 
+ * you would enter "127.0.0.1/jump_start/" with the quotes around it.
  */
 var browserSyncProxy = null; // If === null, browser sync is disabled!
 
@@ -30,11 +30,10 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 // Define sources of files to monitor.
-var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss'],
-    sassSource = './lib/scss/style.scss',
+var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss', './lib/style.scss'],
+    sassSource = './lib/style.scss',
     sassDestination = './',
     jsWatch = './lib/js/**/*.js',
-    jsDestination = '.',
     phpWatch = './**/*.php';
 
 
@@ -61,15 +60,9 @@ gulp.task('page-reload', function() {
 
 // Concatenates and lints scripts, updates resulting JS code to browser.
 gulp.task('script-tasks', function() {
-    gulp.src('./lib/js/vendor/**/*.js')
-        .pipe(concat('vendor.js'))
-        .pipe(gulp.dest(jsDestination));
-
     return gulp.src('./lib/js/*.js')
             .pipe(jsHint())
             .pipe(jsHint.reporter('default'))
-            .pipe(concat('scripts.js'))
-            .pipe(gulp.dest(jsDestination))
             .pipe(reload({stream:true}));
 });
 

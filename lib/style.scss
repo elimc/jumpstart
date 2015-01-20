@@ -4,7 +4,7 @@ Theme URI: https://github.com/elimc/jumpstart/
 Author: Eli McMakin
 Author URI: http://elimcmakin.com
 Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
-Version: 0.6.2
+Version: 0.7.0
 */
 
 /*--------------------------------------------------------------
@@ -24,58 +24,44 @@ Version: 0.6.2
 /*--------------------------------------------------------------
 1. Reset
 --------------------------------------------------------------*/
-@import '../foundation/scss/normalize';
+@import 'foundation/scss/normalize';
 
 /*--------------------------------------------------------------
 2. Foundation Dependencies
 --------------------------------------------------------------*/
 // Uncomment to customize Zurb Foundation For Sites
-@import 'settings';
+@import 'foundation/scss/foundation/settings';
 
 /*--------------------------------------------------------------
 3. Foundation
 --------------------------------------------------------------*/
-@import '../foundation/scss/foundation';
-
-/*--------------------------------------------------------------
-4. Foundation Plugins
---------------------------------------------------------------*/
-// Uncomment to customize Foundation Utility Belt settings
-// @import 'utility-belt-settings';
-
-// Uncomment to start wearing a utility belt
-// @import 'vendor/foundation-utility-belt/foundation-utility-belt';
+@import 'foundation/scss/foundation';
 
 /*--------------------------------------------------------------
 5. Vendor Files
 --------------------------------------------------------------*/
 // Uncomment the Bourbon line to use Bourbon SASS in the project.
-@import "../../node_modules/node-bourbon/assets/stylesheets/bourbon";
+@import "../node_modules/node-bourbon/assets/stylesheets/bourbon";
 
 /*--------------------------------------------------------------
 6. Theme Dependencies
 --------------------------------------------------------------*/
-@import 'fonts';
-@import 'theme-functions';
-@import 'theme-settings';
+@import 'scss/fonts';
+@import 'scss/theme-functions';
+@import 'scss/theme-settings';
 
 /*--------------------------------------------------------------
 7. Theme Classes
 --------------------------------------------------------------*/
-@import 'theme/classes/layouts';
-@import 'theme/classes/skins';
-@import 'theme/classes/type';
+@import 'scss/theme/classes/layouts';
+@import 'scss/theme/classes/skins';
+@import 'scss/theme/classes/type';
 
 /*--------------------------------------------------------------
 8. Theme Components
 --------------------------------------------------------------*/
-@import 'theme/components/buttons';
-@import 'theme/components/icons';
-@import 'theme/components/headers';
-@import 'theme/components/lists';
-@import 'theme/components/menus';
-
-/*--------------------------------------------------------------
-9. Technical Debt
---------------------------------------------------------------*/
-@import 'theme/custom';
+@import 'scss/theme/components/buttons';
+@import 'scss/theme/components/icons';
+@import 'scss/theme/components/headers';
+@import 'scss/theme/components/lists';
+@import 'scss/theme/components/menus';

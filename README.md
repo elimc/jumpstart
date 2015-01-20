@@ -52,6 +52,10 @@ TODO
 
 Changelog
 ---------
+### 0.7 (Jan 20, 2015)
+* Fixed some broken links and small bugs.
+* Bumped to Foundation 5.5.0.
+
 ### 0.6.2 (Nov 19, 2014)
 * Re-enabled bourbon.
 * JS scripts live-reload.
