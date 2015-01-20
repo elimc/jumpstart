@@ -55,6 +55,11 @@ Changelog
 ### 0.7 (Jan 20, 2015)
 * Fixed some broken links and small bugs.
 * Bumped to Foundation 5.5.0.
+* Foundation is now updated via Bower. It can be updated with the `Bower update` command to get the latest foundation files.
+* Major code refactor.
+* A lot of pruning vestigial code.
+* Fixed some issues in Gulp.js.
+* fastclick, placeholder, and modernizr are now properly enqued.
 
 ### 0.6.2 (Nov 19, 2014)
 * Re-enabled bourbon.
