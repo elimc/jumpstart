@@ -56,6 +56,7 @@ Changelog
 * Removed vestigial code.
 * Modernized some functions.
 * Improved bower.json file for updating Foundation.
+* Added comments.php, for compatibility reasons.
 
 ### 0.7 (Jan 20, 2015)
 * Fixed some broken links and small bugs.
