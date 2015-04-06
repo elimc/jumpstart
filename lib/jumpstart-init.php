@@ -32,5 +32,3 @@ require_once 'inc/admin.php';                                   // Customize the
 require_once 'inc/utility-functions.php';                       // Add theme support and run some filters.
 //require_once 'inc/advanced-custom-fields.php';                // Call any custom ACF functions.
 //require_once 'inc/cpt-init.php';                              // Magically load any Custom Posts Types and Custom Taxonomies.
-//require_once 'inc/responsive-content.php';					// Logic related to generating responsive content.
-//require_once 'inc/seo.php';									// Functions realated to search engine indexing

@@ -17,7 +17,7 @@
  * e.g., if your WP install is located on your local server in a folder called jump_start, 
  * you would enter "127.0.0.1/jump_start/" with the quotes around it.
  */
-var browserSyncProxy = null; // If === null, browser sync is disabled!
+var browserSyncProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
 
 // Identify dependencies.
 var gulp = require('gulp'),
