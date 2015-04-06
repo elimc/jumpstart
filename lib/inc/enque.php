@@ -9,9 +9,6 @@ function jumpstart_scripts() {
     // Load stylesheed with dashicons as a dependency.
     // Learn about dashicons: http://melchoyce.github.io/dashicons/
 	wp_enqueue_style( 'jumpstart-style', get_stylesheet_uri(), array( 'dashicons' ) );
-    // wp_enqueue_style( 'slick-carousel-style', LIB . '/bower_components/slick-carousel/slick/slick.css', array( 'jquery' ), '1.0', TRUE );
-
-    //wp_enqueue_script('modernizr', LIB . '/foundation/js/vendor/modernizr.js', array(), '2.8.3', FALSE);
 
     // Load Base Foundation JS.
     wp_enqueue_script( 'foundation', LIB . '/foundation/js/foundation/foundation.js', array( 'jquery' ), '1.0', TRUE );
@@ -38,6 +35,6 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.toolbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 
     // All custom scripts in lib/js
-    //wp_enqueue_script( 'custom-scripts', LIB . '/main.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
+    wp_enqueue_script( 'custom-scripts', LIB . '/main.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 }
 add_action( 'wp_enqueue_scripts', 'jumpstart_scripts' );
