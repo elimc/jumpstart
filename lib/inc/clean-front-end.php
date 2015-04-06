@@ -16,8 +16,8 @@
 function jumpstart_remove_script_version( $src ) {
     return remove_query_arg( 'ver', $src );
 }
-//add_filter( 'script_loader_src', 'jumpstart_remove_script_version' );
-//add_filter( 'style_loader_src', 'jumpstart_remove_script_version' );
+add_filter( 'script_loader_src', 'jumpstart_remove_script_version' );
+add_filter( 'style_loader_src', 'jumpstart_remove_script_version' );
 
 
 
