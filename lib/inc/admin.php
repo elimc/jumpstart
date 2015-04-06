@@ -58,21 +58,35 @@ add_action( 'wp_logout','go_home' );
 /**
  * Remove clutter from main dashboard page.
  *
- * @link http://codex.wordpress.org/Dashboard_Widgets_API Turn off meta boxes.
+ * @link http://digwp.com/2014/02/disable-default-dashboard-widgets/ Modern way to clean dashboard, since WP 3.8
+ * @global object $wp_meta_boxes
  */
-function jumpstart_disable_default_dashboard_widgets() {
-//    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-//    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
-//    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
-//    remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
+function disable_default_dashboard_widgets() {
+
+	global $wp_meta_boxes;
+
+    // Clean default WP admin
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+
+	// bbpress
+	unset($wp_meta_boxes['dashboard']['normal']['core']['bbp-dashboard-right-now']);
+
+    // yoast seo
+	unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);
+
+    // gravity forms
+	unset($wp_meta_boxes['dashboard']['normal']['core']['rg_forms_dashboard']);
+
 }
-add_action( 'wp_dashboard_setup', 'jumpstart_disable_default_dashboard_widgets' );
+//add_action('wp_dashboard_setup', 'disable_default_dashboard_widgets', 999);
 
 
 
@@ -82,12 +96,12 @@ add_action( 'wp_dashboard_setup', 'jumpstart_disable_default_dashboard_widgets' 
  * @link http://codex.wordpress.org/Function_Reference/remove_submenu_page Remove submenu pages.
  */
 function jumpstart_remove_submenus() {
-//    remove_submenu_page( 'themes.php', 'theme-editor.php' );
-//    remove_submenu_page( 'themes.php', 'customize.php' );
-//    remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
-//    remove_submenu_page( 'tools.php', 'tools.php' );
+    remove_submenu_page( 'themes.php', 'theme-editor.php' );
+    remove_submenu_page( 'themes.php', 'customize.php' );
+    remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+    remove_submenu_page( 'tools.php', 'tools.php' );
 }
-add_action( 'admin_menu', 'jumpstart_remove_submenus', 999 );
+//add_action( 'admin_menu', 'jumpstart_remove_submenus', 999 );
 
 
 
@@ -97,18 +111,18 @@ add_action( 'admin_menu', 'jumpstart_remove_submenus', 999 );
  * @link  http://codex.wordpress.org/Function_Reference/remove_menu_page#Examples
  */
 function jumpstart_remove_menus() {
-//    remove_menu_page( 'index.php' );                  //Dashboard
-//    remove_menu_page( 'edit.php' );                   //Posts
-//    remove_menu_page( 'upload.php' );                 //Media
-//    remove_menu_page( 'edit.php?post_type=page' );    //Pages
-//    remove_menu_page( 'edit-comments.php' );          //Comments
-//    remove_menu_page( 'themes.php' );                 //Appearance
-//    remove_menu_page( 'plugins.php' );                //Plugins
-//    remove_menu_page( 'users.php' );                  //Users
-//    remove_menu_page( 'tools.php' );                  //Tools
-//    remove_menu_page( 'options-general.php' );        //Settings
+    remove_menu_page( 'index.php' );                  //Dashboard
+    remove_menu_page( 'edit.php' );                   //Posts
+    remove_menu_page( 'upload.php' );                 //Media
+    remove_menu_page( 'edit.php?post_type=page' );    //Pages
+    remove_menu_page( 'edit-comments.php' );          //Comments
+    remove_menu_page( 'themes.php' );                 //Appearance
+    remove_menu_page( 'plugins.php' );                //Plugins
+    remove_menu_page( 'users.php' );                  //Users
+    remove_menu_page( 'tools.php' );                  //Tools
+    remove_menu_page( 'options-general.php' );        //Settings
 }
-add_action( 'admin_menu', 'jumpstart_remove_menus', 999 );
+//add_action( 'admin_menu', 'jumpstart_remove_menus', 999 );
 
 
 
