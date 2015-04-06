@@ -52,6 +52,11 @@ TODO
 
 Changelog
 ---------
+### 0.7.1 (Apr 6, 2015)
+* Removed vestigial code.
+* Modernized some functions.
+* Improved bower.json file for updating Foundation.
+
 ### 0.7 (Jan 20, 2015)
 * Fixed some broken links and small bugs.
 * Bumped to Foundation 5.5.0.
