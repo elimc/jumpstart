@@ -75,7 +75,8 @@ gulp.task('default', ['sass'], function() {
     if( browserSyncProxy ) {
         // Set the proxy. You followed Step 1, right?
         browserSync({
-            proxy: browserSyncProxy
+            proxy: browserSyncProxy,
+            tunnel: "my"
         });
     }
 
