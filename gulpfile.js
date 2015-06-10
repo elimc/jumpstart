@@ -76,7 +76,7 @@ gulp.task('default', ['sass'], function() {
         // Set the proxy. You followed Step 1, right?
         browserSync({
             proxy: browserSyncProxy,
-            tunnel: "my"
+            tunnel: "tunnel"  // Set the SSH tunnel for mobile testing.
         });
     }
 
