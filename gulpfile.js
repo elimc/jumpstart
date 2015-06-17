@@ -2,7 +2,7 @@
  * Gulpfile settings for jumpstart.
  * 
  * Instructions:
- * 1. Adjust the path of the browserSyncProxy variable below.
+ * 1. Adjust the path of the bsProxy variable below.
  * 2. Using the CLI, navigate to the root of your gulpfile.js file and enter "npm install" without the quotes.
  * 3. Wait for the node_modules to automatically install. Once installed, you won't have to run "npm install" for this site in the future.
  * 4. Enter "gulp" in the CLI, without the quotes. This will start your node server, along with automattic SASS compiling.
@@ -13,47 +13,44 @@
 
 /**
  * STEP 1
- * Adjust the browserSyncProxy var to the root of your gulpfile.js.
- * e.g., if your WP install is located on your local server in a folder called jump_start, 
- * you would enter "127.0.0.1/jump_start/" with the quotes around it.
+ * Adjust the bsProxy var to the root of your gulpfile.js.
+ * e.g., if your WP install is located on your local server in a folder called test, 
+ * you would enter "127.0.0.1/test/" with the quotes around it.
  */
-var browserSyncProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
+var bsProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
 
 // Identify dependencies.
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    jsHint = require('gulp-jshint'),
-    concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    bourbon = require('node-bourbon'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+var gulp            = require('gulp'),
+    sass            = require('gulp-sass'),
+    bourbon         = require('node-bourbon'),
+    browserSync     = require('browser-sync'),
+    reload          = browserSync.reload;
 
 // Define sources of files to monitor.
-var sassWatch = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss', './lib/style.scss'],
-    sassSource = './lib/style.scss',
+var sassWatch       = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss', './lib/style.scss'],
+    sassSource      = './lib/style.scss',
     sassDestination = './',
-    jsWatch = './lib/js/**/*.js',
-    phpWatch = './**/*.php';
+    jsWatch         = './lib/js/**/*.js',
+    phpWatch        = './**/*.php';
 
 
 // Compile Sass file to CSS, and updates browsers.
 gulp.task('sass', function() {
     return gulp.src(sassSource)
-    .pipe(sass({
-        includePaths: require('node-bourbon').includePaths,
-        errLogToConsole: true
-    }))
-    .pipe(gulp.dest(sassDestination))
-    .pipe(reload({stream:true}));
+        .pipe(sass({
+            includePaths: require('node-bourbon').includePaths,
+            errLogToConsole: true,
+            outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest(sassDestination))
+        .pipe(reload({stream:true}));
 });
 
 
 
 // Reload Web page.
 gulp.task('page-reload', function() {
-    return gulp.src(phpWatch)
-        .pipe(reload({stream:true}));
+    reload();
 });
 
 
@@ -72,10 +69,10 @@ gulp.task('script-tasks', function() {
 gulp.task('default', ['sass'], function() {
 
     // If browserSync is enabled
-    if( browserSyncProxy ) {
+    if( bsProxy ) {
         // Set the proxy. You followed Step 1, right?
         browserSync({
-            proxy: browserSyncProxy,
+            proxy: bsProxy,
             tunnel: "tunnel"  // Set the SSH tunnel for mobile testing.
         });
     }

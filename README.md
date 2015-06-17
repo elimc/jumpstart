@@ -3,10 +3,9 @@
 
 A combination of Foundation, SASS, Gulp, and Browsersync to create a modern WordPress theme with a sophisticated build process.
 
-Most Recent: **Version 0.7.2 (June 10, 2015)** -- See [Changelog](./CHANGELOG.md)
+Most Recent: **Version 0.7.3 (June 17, 2015)** -- See [Changelog](./CHANGELOG.md)
 
-Folder Structure
-----------------
+# Folder Structure
 
  * `lib`           -       All of the custom functionality of the site.
     * `branding`     -       All web associated branding, e.g, favicon, login-logo, etc ...
@@ -17,8 +16,7 @@ Folder Structure
     * `js`           -       All custom js files.
     * `scss`         -       All cutom SASS files and partials.
 
-Install
--------
+# Install
 
 Download `jumpstart` into your themes directory. Use it for your awesome projects.
 
@@ -32,13 +30,11 @@ Gulp Instructions:
 4. Enter `gulp` in the CLI, without the quotes. This will start your node server, along with automattic SASS compiling.
 5. That's it!
 
-TODO
-----
+# TODO
 
 * Improve ease of use with Vagrant
 
-Authors
--------
+# Authors
 
 **Eli McMakin**
 

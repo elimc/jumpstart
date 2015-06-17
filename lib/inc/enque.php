@@ -35,6 +35,6 @@ function jumpstart_scripts() {
     //wp_enqueue_script( 'foundation-toolbar', LIB . '/foundation/js/foundation/foundation.toolbar.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 
     // All custom scripts in lib/js
-    wp_enqueue_script( 'custom-scripts', LIB . '/main.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
+    wp_enqueue_script( 'custom-scripts', LIB . '/js/main.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 }
 add_action( 'wp_enqueue_scripts', 'jumpstart_scripts' );
