@@ -40,7 +40,6 @@ gulp.task('sass', function() {
         .pipe(sass({
             includePaths: require('node-bourbon').includePaths,
             errLogToConsole: true,
-            outputStyle: 'compressed'
         }))
         .pipe(gulp.dest(sassDestination))
         .pipe(reload({stream:true}));
