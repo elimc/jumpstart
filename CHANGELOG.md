@@ -3,6 +3,7 @@
 ### 0.7.3 (June 17, 2015)
 * Refactored gulpfile.js.
 * Fixed broken js link.
+* Fundation version bump to 5.5.2.
 
 ### 0.7.2 (June 10, 2015)
 * Adds Browsersync SSH tunnel support for rapid cross device testing.

@@ -13,42 +13,38 @@ Version: 0.7.0
 1. - Reset
 2. - Foundation Dependencies
 3. - Foundation
-4. - Foundation Plugins
-5. - Vendor Files
-6. - Theme Dependencies
-7. - Theme Classes
-8. - Theme Components
-9. - Technical Debt
+4. - Vendor Files
+5. - Theme Dependencies
+6. - Theme Classes
+7. - Theme Components
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 1. Reset
 --------------------------------------------------------------*/
-@import 'foundation/scss/normalize';
+@import 'foundation/scss/normalize'; // CSS Reset
 
 /*--------------------------------------------------------------
 2. Foundation Dependencies
 --------------------------------------------------------------*/
 // Uncomment to customize Zurb Foundation For Sites
-@import 'foundation/scss/foundation/settings';
+@import 'foundation/scss/foundation/settings'; // Default Foundation settings.
 
 /*--------------------------------------------------------------
 3. Foundation
 --------------------------------------------------------------*/
-@import 'foundation/scss/foundation';
+@import 'foundation/scss/foundation'; // Imports Foundation js modules.
 
 /*--------------------------------------------------------------
 5. Vendor Files
 --------------------------------------------------------------*/
-// Uncomment the Bourbon line to use Bourbon SASS in the project.
-@import "../node_modules/node-bourbon/assets/stylesheets/bourbon";
+@import "../node_modules/node-bourbon/assets/stylesheets/bourbon"; // Use Bourbon, if you like ... 
 
 /*--------------------------------------------------------------
 6. Theme Dependencies
 --------------------------------------------------------------*/
 @import 'scss/fonts';
-@import 'scss/theme-functions';
-@import 'scss/theme-settings';
+@import 'scss/settings'; // Overwrite the default Foundation settings. Bower update won't delete this file.
 
 /*--------------------------------------------------------------
 7. Theme Classes
