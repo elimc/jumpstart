@@ -32,7 +32,7 @@ Gulp Instructions:
 
 # Gulp
 ##### Local URL
-To use Gulp, your must enter `gulp` into the Command Line Interface (CLI), thus loading the browser with the URL [http://localhost:3000](#), after the script has completed installing everything. Any changes you make to your files in your project will automatically be refreshed on this page. In order to stop this process, simply enter `control-C` (sometimes written as `^C`) in the CLI. This will stop any Unix process. To restart this process, simply enter `gulp` in the CLI. This will load another browser window with the URL [http://localhost:3000](#).
+To use Gulp, your must enter `gulp` into the Command Line Interface (CLI), thus loading the browser with the URL [http://localhost:3000](#). Any changes you make to your files in your project will automatically be refreshed on this page. In order to stop this process, simply enter `control-C` (sometimes written as `^C`) in the CLI. This will stop any Unix process. To restart this process, simply enter `gulp` in the CLI. This will load another browser window with the URL [http://localhost:3000](#).
 
 ![URL options](./readme_images/gulp.jpg)
 
