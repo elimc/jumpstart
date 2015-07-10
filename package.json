@@ -1,6 +1,6 @@
 {
   "name": "jumpstart",
-  "version": "0.7.3",
+  "version": "0.7.5",
   "description": "Gulp.js config to compile SASS and set up browser-sync.",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
     "browser-sync": "^2.7.13",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.3",
-    "node-bourbon": "^4.2.3"
+    "gulp-sourcemaps": "^1.5.2"
   }
 }

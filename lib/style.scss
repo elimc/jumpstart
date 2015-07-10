@@ -4,7 +4,7 @@ Theme URI: https://github.com/elimc/jumpstart/
 Author: Eli McMakin
 Author URI: http://elimcmakin.com
 Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
-Version: 0.7.0
+Version: 0.7.5
 */
 
 /*--------------------------------------------------------------
@@ -13,10 +13,9 @@ Version: 0.7.0
 1. - Reset
 2. - Foundation Dependencies
 3. - Foundation
-4. - Vendor Files
-5. - Theme Dependencies
-6. - Theme Classes
-7. - Theme Components
+4. - Theme Dependencies
+5. - Theme Classes
+6. - Theme Components
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -36,25 +35,20 @@ Version: 0.7.0
 @import 'foundation/scss/foundation'; // Imports Foundation js modules.
 
 /*--------------------------------------------------------------
-5. Vendor Files
---------------------------------------------------------------*/
-@import "../node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets/bourbon"; // Use Bourbon, if you like ... 
-
-/*--------------------------------------------------------------
-6. Theme Dependencies
+4. Theme Dependencies
 --------------------------------------------------------------*/
 @import 'scss/fonts';
 @import 'scss/settings'; // Overwrite the default Foundation settings. Bower update won't delete this file.
 
 /*--------------------------------------------------------------
-7. Theme Classes
+5. Theme Classes
 --------------------------------------------------------------*/
 @import 'scss/theme/classes/layouts';
 @import 'scss/theme/classes/skins';
 @import 'scss/theme/classes/type';
 
 /*--------------------------------------------------------------
-8. Theme Components
+6. Theme Components
 --------------------------------------------------------------*/
 @import 'scss/theme/components/buttons';
 @import 'scss/theme/components/icons';

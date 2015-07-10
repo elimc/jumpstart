@@ -22,7 +22,7 @@ var bsProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
 // Identify dependencies.
 var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
-    bourbon         = require('node-bourbon'),
+    sourcemaps      = require('gulp-sourcemaps'),
     browserSync     = require('browser-sync'),
     reload          = browserSync.reload;
 
@@ -37,10 +37,9 @@ var sassWatch       = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss', './
 // Compile Sass file to CSS, and updates browsers.
 gulp.task('sass', function() {
     return gulp.src(sassSource)
-        .pipe(sass({
-            includePaths: require('node-bourbon').includePaths,
-            errLogToConsole: true,
-        }))
+        .pipe(sourcemaps.init())  // Process the original sources
+            .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sourcemaps.write()) // Add the map to modified source.
         .pipe(gulp.dest(sassDestination))
         .pipe(reload({stream:true}));
 });

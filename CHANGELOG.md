@@ -1,5 +1,11 @@
 **Changelog**
 =============
+### 0.7.5 (July 9, 2015)
+* Now using sourcemaps for easier debugging.
+* Got rid of Bourbon.
+* devDependencies all have version bumps.
+* Better documentation.
+
 ### 0.7.3 (June 17, 2015)
 * Refactored gulpfile.js.
 * Fixed broken js link.
