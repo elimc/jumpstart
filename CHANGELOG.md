@@ -1,11 +1,13 @@
 **Changelog**
 =============
-### 1.0.0 (July 13, 2015)
+### 0.8.0 (July 13, 2015)
 * gulp-plumber prevents crashes from SASS errors.
 * gulp-sourcemaps allows in browser editing of SASS files.
 * Adds rem partial.
 * Adds larger screenshot.
 * Foundation folders moved for easier Bower updates.
+* Some Foundation JS files now concatenated for few HTTP requests.
+* New JS folder structure.
 
 ### 0.7.5 (July 9, 2015)
 * Now using sourcemaps for easier debugging.
