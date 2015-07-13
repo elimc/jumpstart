@@ -39,6 +39,7 @@ Version: 0.7.5
 --------------------------------------------------------------*/
 @import 'scss/fonts';
 @import 'scss/settings'; // Overwrite the default Foundation settings. Bower update won't delete this file.
+@import 'scss/rem'; // Overwrite the default Foundation settings. Bower update won't delete this file.
 
 /*--------------------------------------------------------------
 5. Theme Classes
