@@ -20,6 +20,7 @@
     "browser-sync": "^2.7.13",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.3",
-    "gulp-sourcemaps": "^1.5.2"
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-plumber": "1.0.1"
   }
 }
