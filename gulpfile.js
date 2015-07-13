@@ -58,8 +58,6 @@ gulp.task('page-reload', function() {
 // Concatenates and lints scripts, updates resulting JS code to browser.
 gulp.task('script-tasks', function() {
     return gulp.src('./lib/js/*.js')
-            .pipe(jsHint())
-            .pipe(jsHint.reporter('default'))
             .pipe(reload({stream:true}));
 });
 
