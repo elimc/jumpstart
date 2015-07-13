@@ -25,13 +25,15 @@ var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
     sourcemaps      = require('gulp-sourcemaps');
     plumber         = require('gulp-plumber');
+    concat          = require('gulp-concat');
     reload          = browserSync.reload;
 
 // Define sources of files to monitor.
 var sassWatch       = ['./lib/scss/**/*.scss', './lib/style.scss'],
     sassSource      = './lib/style.scss',
     sassDestination = './',
-    jsWatch         = './lib/js/**/*.js',
+    foundationWatch = './lib/js/dependencies/foundation-bootstrap.js',
+    jsWatch         = ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
     phpWatch        = './**/*.php';
 
 
@@ -55,9 +57,26 @@ gulp.task('page-reload', function() {
 
 
 
-// Concatenates and lints scripts, updates resulting JS code to browser.
-gulp.task('script-tasks', function() {
-    return gulp.src('./lib/js/*.js')
+// Concatenates Foundation's JS, for fewer HTTP requests, and spits out code to browser.
+gulp.task('foundation', function() {
+    return gulp.src([
+        './bower_components/foundation/js/foundation/foundation.js',
+        './bower_components/foundation/js/vendor/fastclick.js',
+        './bower_components/foundation/js/vendor/placeholder.js',
+        './bower_components/foundation/js/vendor/modernizr.js',
+        './lib/js/dependencies/foundation-bootstrap.js'
+    ])
+        .pipe(plumber())
+        .pipe(concat('foundation-bootstrap.min.js'))
+        .pipe(reload({stream:true}));
+});
+
+
+
+// Reloads custom and vendor JS in browser.
+gulp.task('js', function() {
+    return gulp.src(['./lib/js/custom/*.js'], ['./lib/js/dependencies/*.js'])
+        .pipe(plumber())
         .pipe(reload({stream:true}));
 });
 
@@ -77,6 +96,7 @@ gulp.task('default', ['sass'], function() {
 
     // Call specific functions when specific file is updated and saved.
     gulp.watch(sassWatch, ['sass']);
-    gulp.watch(jsWatch, ['script-tasks']);
+    gulp.watch(foundationWatch, ['foundation']);
+    gulp.watch(jsWatch, ['js']);
     gulp.watch(phpWatch, ['page-reload']);
 });
