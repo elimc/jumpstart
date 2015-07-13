@@ -12,7 +12,6 @@
  *
  * branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
  * fonts        -       Any web fonts to be loaded locally.
- * foundation   -       Foundation Framework.
  * images       -       All images to be used in the site. These images aren't related to the companies branding.
  * inc          -       All PHP classes and function files.
  * js           -       All custom js files.

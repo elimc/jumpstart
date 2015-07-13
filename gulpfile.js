@@ -28,7 +28,7 @@ var gulp            = require('gulp'),
     reload          = browserSync.reload;
 
 // Define sources of files to monitor.
-var sassWatch       = ['./lib/foundation/**/*.scss', './lib/scss/**/*.scss', './lib/style.scss'],
+var sassWatch       = ['./lib/scss/**/*.scss', './lib/style.scss'],
     sassSource      = './lib/style.scss',
     sassDestination = './',
     jsWatch         = './lib/js/**/*.js',

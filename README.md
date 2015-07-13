@@ -5,14 +5,13 @@ A combination of Foundation, SASS, Gulp, and Browsersync to create a modern Word
 
 **NOTE:** A bug in the dependencies has stopped Gulp and Browsersync from working correctly. Hopefully, it will be rectified soon...
 
-Most Recent: **Version 0.7.5 (July 9, 2015)** -- See [Changelog](./CHANGELOG.md)
+Most Recent: **Version 1.0.0 (July 13, 2015)** -- See [Changelog](./CHANGELOG.md)
 
 # Folder Structure
 
  * `lib`           -       All of the custom functionality of the site.
     * `branding`     -       All web associated branding, e.g, favicon, login-logo, etc ...
     * `fonts`        -       Any web fonts to be loaded locally.
-    * `foundation`   -       Foundation Framework.
     * `images`       -       All images to be used in the site. These images aren't related to the companies branding.
     * `inc`          -       All PHP classes and function files.
     * `js`           -       All custom js files.
@@ -20,7 +19,7 @@ Most Recent: **Version 0.7.5 (July 9, 2015)** -- See [Changelog](./CHANGELOG.md)
 
 # Install
 
-Download `jumpstart` into your themes directory. Use it for your awesome projects.
+Download `jumpstart` into your themes directory. Use it for your awesome projects. You will have to enter `bower install` and `npm install` if you do not have *bower_components* or *node_modules* installed.
 
 `jumpstart` works best with Gulp. The Gulp build process is only for those who are major studmeisters:
 

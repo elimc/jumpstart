@@ -15,3 +15,8 @@ if ( !defined( 'LIB' ) ) {
     $lib = get_stylesheet_directory_uri() . "/lib";
     define('LIB', $lib );
 }
+
+if ( !defined( 'FOUNDATION' ) ) {
+    $lib = get_stylesheet_directory_uri() . "/bower_components/foundation/js";
+    define('FOUNDATION', $lib );
+}

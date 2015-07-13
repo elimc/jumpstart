@@ -4,55 +4,25 @@ Theme URI: https://github.com/elimc/jumpstart/
 Author: Eli McMakin
 Author URI: http://elimcmakin.com
 Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
-Version: 0.7.5
+Version: 1.0
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1. - Reset
-2. - Foundation Dependencies
-3. - Foundation
-4. - Theme Dependencies
-5. - Theme Classes
-6. - Theme Components
---------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-1. Reset
---------------------------------------------------------------*/
-@import 'foundation/scss/normalize'; // CSS Reset
 
-/*--------------------------------------------------------------
-2. Foundation Dependencies
---------------------------------------------------------------*/
-// Uncomment to customize Zurb Foundation For Sites
-@import 'foundation/scss/foundation/settings'; // Default Foundation settings.
+// Reset styles.
+@import "../bower_components/foundation/scss/normalize";
 
-/*--------------------------------------------------------------
-3. Foundation
---------------------------------------------------------------*/
-@import 'foundation/scss/foundation'; // Imports Foundation js modules.
+// Load Foundation.
+@import "../bower_components/foundation/scss/foundation";
 
-/*--------------------------------------------------------------
-4. Theme Dependencies
---------------------------------------------------------------*/
-@import 'scss/fonts';
-@import 'scss/settings'; // Overwrite the default Foundation settings. Bower update won't delete this file.
-@import 'scss/rem'; // Overwrite the default Foundation settings. Bower update won't delete this file.
+// Load Theme Dependencies.
+@import "./scss/dependencies/settings"; // Customize Zurb Foundation For Sites.
+@import "./scss/dependencies/rem"; // Convert px to rem with rem().
 
-/*--------------------------------------------------------------
-5. Theme Classes
---------------------------------------------------------------*/
-@import 'scss/theme/classes/layouts';
-@import 'scss/theme/classes/skins';
-@import 'scss/theme/classes/type';
-
-/*--------------------------------------------------------------
-6. Theme Components
---------------------------------------------------------------*/
-@import 'scss/theme/components/buttons';
-@import 'scss/theme/components/icons';
-@import 'scss/theme/components/headers';
-@import 'scss/theme/components/lists';
-@import 'scss/theme/components/menus';
+// Load Theme styles.
+@import "./scss/components/constants";
+@import "./scss/components/fonts"; // Load any fonts.
+@import "./scss/components/buttons";
+@import "./scss/components/forms";
+@import "./scss/components/header";
+@import "./scss/components/footer";
