@@ -75,7 +75,7 @@ gulp.task('foundation', function() {
 
 // Reloads custom and vendor JS in browser.
 gulp.task('js', function() {
-    return gulp.src(['./lib/js/custom/*.js'], ['./lib/js/dependencies/*.js'])
+    return gulp.src('./lib/js/custom/*.js')
         .pipe(plumber())
         .pipe(reload({stream:true}));
 });
