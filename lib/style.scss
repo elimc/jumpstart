@@ -11,25 +11,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
-/*!-------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
+// Normalize
 @import "../bower_components/foundation/scss/normalize";
 
-/*!-------------------------------------------------------------
-# Load Foundation
---------------------------------------------------------------*/
+// Load Foundation
 @import "../bower_components/foundation/scss/foundation";
 
-/*!-------------------------------------------------------------
-# Load theme dependencies
---------------------------------------------------------------*/
+// Load theme dependencies
 @import "./scss/dependencies/settings"; // Customize Zurb Foundation For Sites.
 @import "./scss/dependencies/rem"; // Convert px to rem with rem().
 
-/*!-------------------------------------------------------------
-# Load theme styles
---------------------------------------------------------------*/
+//Load theme styles
 @import "./scss/components/constants";
 @import "./scss/components/fonts"; // Load any fonts.
 @import "./scss/components/buttons";
