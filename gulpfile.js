@@ -26,6 +26,7 @@ var gulp            = require('gulp'),
     sourcemaps      = require('gulp-sourcemaps');
     plumber         = require('gulp-plumber');
     concat          = require('gulp-concat');
+    autoprefixer    = require('gulp-autoprefixer');
     reload          = browserSync.reload;
 
 // Define sources of files to monitor.
@@ -42,6 +43,16 @@ gulp.task('sass', function() {
     return gulp.src(sassSource)
         .pipe(plumber())
         .pipe(sourcemaps.init())  // Process the original sources
+//            .pipe(autoprefixer, {
+//                browsers: [
+//                    'last 2 versions',
+//                    'ie 8',
+//                    'ie 9',
+//                    'android 2.3',
+//                    'android 4',
+//                    'opera 12'
+//                ]
+//            })
             .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sourcemaps.write('./')) // Add the map to modified source.
         .pipe(gulp.dest(sassDestination))
