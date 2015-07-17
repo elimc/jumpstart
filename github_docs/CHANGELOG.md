@@ -1,5 +1,10 @@
 **Changelog**
 =============
+### 0.8.1 (July 17, 2015)
+* Fixes broken theme due to compressed SASS deleting important necessary comments in style.css.
+* Adds autoprefixer support for IE9, Android 2.3, Android 4.0, and Opera 12.
+* Better file structure and documentation.
+
 ### 0.8.0 (July 13, 2015)
 * gulp-plumber prevents crashes from SASS errors.
 * gulp-sourcemaps allows in browser editing of SASS files.
