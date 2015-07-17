@@ -64,7 +64,7 @@ gulp.task('foundation', function() {
         './bower_components/foundation/js/vendor/fastclick.js',
         './bower_components/foundation/js/vendor/placeholder.js',
         './bower_components/foundation/js/vendor/modernizr.js',
-        './lib/js/dependencies/foundation-bootstrap.js'
+        './lib/js/vendor/foundation-bootstrap.js'
     ])
         .pipe(plumber())
         .pipe(concat('foundation-bootstrap.min.js'))
