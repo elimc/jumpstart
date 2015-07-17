@@ -43,17 +43,11 @@ gulp.task('sass', function() {
     return gulp.src(sassSource)
         .pipe(plumber())
         .pipe(sourcemaps.init())  // Process the original sources
-//            .pipe(autoprefixer, {
-//                browsers: [
-//                    'last 2 versions',
-//                    'ie 8',
-//                    'ie 9',
-//                    'android 2.3',
-//                    'android 4',
-//                    'opera 12'
-//                ]
-//            })
             .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(autoprefixer({
+                browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4'],
+                cascade: false
+            }))
         .pipe(sourcemaps.write('./')) // Add the map to modified source.
         .pipe(gulp.dest(sassDestination))
         .pipe(reload({stream:true}));

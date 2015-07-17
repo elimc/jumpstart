@@ -15,7 +15,7 @@ function jumpstart_scripts() {
 //    wp_enqueue_script( 'fastClick', FOUNDATION . '/vendor/fastclick.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 //    wp_enqueue_script( 'placeholder', FOUNDATION . '/vendor/placeholder.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
 //    wp_enqueue_script( 'modernizr', FOUNDATION . '/vendor/modernizr.js', array( 'jquery', 'foundation' ), '1.0', FALSE );
-    wp_enqueue_script( 'foundation', LIB . '/js/dependencies/foundation-bootstrap.min.js', array( 'jquery' ), '1.0', TRUE );
+    wp_enqueue_script( 'foundation', LIB . '/js/vendor/foundation-bootstrap.min.js', array( 'jquery' ), '1.0', TRUE );
 
     // Foundation Modules
 //    wp_enqueue_script( 'foundation-abide', FOUNDATION . '/foundation/foundation.abide.js', array( 'jquery', 'foundation' ), '1.0', TRUE );
