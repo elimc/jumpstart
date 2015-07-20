@@ -1,5 +1,8 @@
 **Changelog**
 =============
+### 0.8.2 (July 20, 2015)
+* Browsersync and Gulp are working with jumpstart, again.
+
 ### 0.8.1 (July 17, 2015)
 * Fixes broken theme due to compressed SASS deleting important necessary comments in style.css.
 * Adds autoprefixer support for IE9, Android 2.3, Android 4.0, and Opera 12.

@@ -3,9 +3,9 @@
 
 A combination of Foundation, SASS, Gulp, and Browsersync to create a modern WordPress theme with a sophisticated build process.
 
-**NOTE:** A bug in the dependencies has stopped Gulp and Browsersync from working correctly. Hopefully, it will be rectified soon...
+**NOTE:** Gulp and BrowserSync are working again!
 
-Most Recent: **Version 0.8.1 (July 17, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
+Most Recent: **Version 0.8.2 (July 17, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
 
 # Folder Structure
 
@@ -33,18 +33,18 @@ Gulp Instructions:
 
 # Gulp
 ##### Local URL
-To use Gulp, your must enter `gulp` into the Command Line Interface (CLI), thus loading the browser with the URL [http://localhost:3000](#). Any changes you make to your files in your project will automatically be refreshed on this page. In order to stop this process, simply enter `control-C` (sometimes written as `^C`) in the CLI. This will stop any Unix process. To restart this process, simply enter `gulp` in the CLI. This will load another browser window with the URL [http://localhost:3000](#).
-
+The script will ask if you would like to install Gulp and NPM. If you choose yes, the bash script will automatically enter `gulp` into the Command Line Interface (CLI), thus loading the browser with the URL [http://localhost:3000](#), after the script has completed installing everything. Any changes you make to your files in your project will automatically be refreshed on this page. In order to stop this process, simply enter `control-C` (sometimes written as `^C`) in the CLI. This will stop any Unix process. To restart this process, simply enter `gulp` in the CLI. This will load another browser window with the URL [http://localhost:3000](#).
 ![URL options](./github_docs/gulp.jpg)
 
 ##### External URL
 While the Local URL is great for testing on your host machine, you might want to do Cross Device Testing on devices that are attached to your local WiFi. For example, you might want to see automatic SASS injection/page reloading on your tablet or phone. For these devices you will use the External URL. In the image above, the External URL is [http://10.0.1.8:3000](#). Enter the External URL that you see in your CLI into your phone or tablet. As long as they are connected to the same WiFi network as your computer, you will be synced.
 
+Another use-case for this is to test your site on an [IE9 VM](http://dev.modern.ie/tools/vms/). Yep, your IE9 VM will automatically refresh in a VM too.
+
 ##### Tunnel URL
-The default setup also comes with the ability to sync devices that are not on your local WiFi network. It does this via SSH Tunneling. One use-case for this is to test your site on an [IE9 VM](http://dev.modern.ie/tools/vms/). Another use-case would be to show your currently-in-development local site to remote clients. A client in a different country could see updates to a site on your local machine while your talk to them on the phone. They will think you possess magic.
+The default setup also comes with the ability to sync devices that are not on your local WiFi network. It does this via SSH Tunneling. A use-case would be to show your currently-in-development local site to remote clients. A client in a different country could see updates to a site on your local machine while your talk to them on the phone. They will think you possess magic.
 
-In the image above, the URL for SSH Tunneling is https://tunnel.localtunnel.me. Enter this URL in your IE9 VM, or give it to your client, and blow people's minds.
-
+In the image above, the URL for SSH Tunneling is https://tunnel.localtunnel.me. Give this URL to your client, and blow their minds.
 ![URL options](./github_docs/browsersync_urls_web.png)
 
 # Working with Vagrant
