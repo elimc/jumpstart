@@ -6,17 +6,6 @@
  *
  * Commenting out lines disables functionality.
  *
- **********************************************
- *
- * Folder structure
- *
- * branding     -       All web associated branding, e.g, favicon, login-logo, etc ...
- * fonts        -       Any web fonts to be loaded locally.
- * images       -       All images to be used in the site. These images aren't related to the companies branding.
- * inc          -       All PHP classes and function files.
- * js           -       All custom js files.
- * scss         -       All cutom SASS files and partials.
- *
  */
 
 

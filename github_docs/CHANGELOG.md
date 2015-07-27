@@ -3,6 +3,7 @@
 ### 0.9.0 (July 27, 2015)
 * Gulpfile.js now using modern BrowserSync syntax, which happens to be faster.
 * Main.js is now enqued by default.
+* Documentation improvements.
 
 ### 0.8.2 (July 20, 2015)
 * Browsersync and Gulp are working with jumpstart, again.
