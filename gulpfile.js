@@ -22,7 +22,7 @@ var bsProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
 // Identify dependencies.
 var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
-    browserSync     = require('browser-sync'),
+    browserSync     = require('browser-sync').create(),
     sourcemaps      = require('gulp-sourcemaps');
     plumber         = require('gulp-plumber');
     concat          = require('gulp-concat');
@@ -50,7 +50,7 @@ gulp.task('sass', function() {
             }))
         .pipe(sourcemaps.write('./')) // Add the map to modified source.
         .pipe(gulp.dest(sassDestination))
-        .pipe(reload({stream:true}));
+        .pipe(browserSync.stream());
 });
 
 
@@ -73,7 +73,7 @@ gulp.task('foundation', function() {
     ])
         .pipe(plumber())
         .pipe(concat('foundation-bootstrap.min.js'))
-        .pipe(reload({stream:true}));
+        .pipe(browserSync.stream());
 });
 
 
@@ -82,7 +82,7 @@ gulp.task('foundation', function() {
 gulp.task('js', function() {
     return gulp.src('./lib/js/custom/*.js')
         .pipe(plumber())
-        .pipe(reload({stream:true}));
+        .pipe(browserSync.stream());
 });
 
 
@@ -93,7 +93,7 @@ gulp.task('default', ['sass'], function() {
     // If browserSync is enabled
     if( bsProxy ) {
         // Set the proxy. You followed Step 1, right?
-        browserSync({
+        browserSync.init({
             proxy: bsProxy,
             tunnel: "tunnel"  // Set the SSH tunnel for mobile testing.
         });
@@ -103,5 +103,5 @@ gulp.task('default', ['sass'], function() {
     gulp.watch(sassWatch, ['sass']);
     gulp.watch(foundationWatch, ['foundation']);
     gulp.watch(jsWatch, ['js']);
-    gulp.watch(phpWatch, ['page-reload']);
+    gulp.watch(phpWatch).on('change', browserSync.reload);
 });
