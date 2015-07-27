@@ -5,7 +5,7 @@ A combination of Foundation, SASS, Gulp, and Browsersync to create a modern Word
 
 **NOTE:** Gulp and BrowserSync are working again!
 
-Most Recent: **Version 0.8.2 (July 17, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
+Most Recent: **Version 0.9.0 (July 27, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
 
 # Folder Structure
 

@@ -38,6 +38,7 @@ var sassWatch       = ['./lib/scss/**/*.scss', './lib/style.scss'],
     phpWatch        = './**/*.php';
 
 
+
 // Compile Sass file to CSS, and updates browsers.
 gulp.task('sass', function() {
     return gulp.src(sassSource)
@@ -51,13 +52,6 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.write('./')) // Add the map to modified source.
         .pipe(gulp.dest(sassDestination))
         .pipe(browserSync.stream());
-});
-
-
-
-// Reload Web page.
-gulp.task('page-reload', function() {
-    reload();
 });
 
 
@@ -78,7 +72,7 @@ gulp.task('foundation', function() {
 
 
 
-// Reloads custom and vendor JS in browser.
+// Reloads custom JS in browser.
 gulp.task('js', function() {
     return gulp.src('./lib/js/custom/*.js')
         .pipe(plumber())
