@@ -89,11 +89,7 @@ gulp.task('default', ['sass'], function() {
         // Set the proxy. You followed Step 1, right?
         browserSync.init({
             proxy: bsProxy,
-            tunnel: "tunnel",  // Set the SSH tunnel for mobile testing.
-            snippetOptions: {  // Turn off BS while in admin https://github.com/BrowserSync/browser-sync/issues/373
-                whitelist: ["/wp-admin/admin-ajax.php"],  // whitelist checked first.
-                blacklist: ["/wp-admin/**"]
-            }
+            tunnel: "tunnel"  // Set the SSH tunnel for mobile testing.
         });
     }
 
