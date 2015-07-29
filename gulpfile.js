@@ -26,6 +26,8 @@ var gulp            = require('gulp'),
     sourcemaps      = require('gulp-sourcemaps');
     plumber         = require('gulp-plumber');
     concat          = require('gulp-concat');
+    uglify          = require('gulp-uglify'),
+    rename          = require('gulp-rename'),
     autoprefixer    = require('gulp-autoprefixer');
     reload          = browserSync.reload;
 
@@ -33,7 +35,7 @@ var gulp            = require('gulp'),
 var sassWatch       = ['./lib/scss/**/*.scss', './lib/style.scss'],
     sassSource      = './lib/style.scss',
     sassDestination = './',
-    foundationWatch = './lib/js/dependencies/foundation-bootstrap.js',
+    foundationWatch = './lib/js/vendor/foundation-bootstrap.js',
     jsWatch         = ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
     phpWatch        = './**/*.php';
 
@@ -65,8 +67,9 @@ gulp.task('foundation', function() {
         './bower_components/foundation/js/vendor/modernizr.js',
         './lib/js/vendor/foundation-bootstrap.js'
     ])
-        .pipe(plumber())
-        .pipe(concat('foundation-bootstrap.min.js'))
+        .pipe(concat('foundation.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./lib/js/min'))
         .pipe(browserSync.stream());
 });
 
@@ -75,14 +78,16 @@ gulp.task('foundation', function() {
 // Reloads custom JS in browser.
 gulp.task('js', function() {
     return gulp.src('./lib/js/custom/*.js')
-        .pipe(plumber())
+        .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./lib/js/min'))
         .pipe(browserSync.stream());
 });
 
 
 
 // Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
-gulp.task('default', ['sass'], function() {
+gulp.task('default', ['sass', 'foundation', 'js'], function() {
 
     // If browserSync is enabled
     if( bsProxy ) {
