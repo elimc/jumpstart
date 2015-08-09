@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="<?php echo LIB; ?>/branding/favicon.ico">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo LIB; ?>/branding/apple-touch-icon.png">
+
+    <!--180×180px – iPad and iPad mini with @2x display running iOS 8-->
+    <!--<link rel="apple-touch-icon" href="<?php echo LIB; ?>/branding/apple-touch-icon.png">-->
 <?php wp_head(); ?>
 </head>
 
