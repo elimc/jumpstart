@@ -1,10 +1,11 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Aug 9, 2015, 3:53:08 AM
-    Author     : elimcmakin
-*/
+::-moz-selection, ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
