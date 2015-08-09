@@ -22,6 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "./scss/dependencies/rem"; // Convert px to rem with rem().
 
 //Load theme styles
+@import "./scss/components/base";
 @import "./scss/components/constants";
 @import "./scss/components/fonts"; // Load any fonts.
 @import "./scss/components/buttons";
