@@ -1,5 +1,12 @@
 **Changelog**
 =============
+### 0.1.0 (Aug 11, 2015)
+* Updated Apple Touch Icon support.
+* Friendly message to < IE9 to upgrade.
+* Improved documentation.
+* All JS concatenated and minified.
+* h1 tag include in _base.scss to demonstrate sourcemaps during tech demos.
+
 ### 0.9.0 (July 27, 2015)
 * Gulpfile.js now using modern BrowserSync syntax, which happens to be faster.
 * Main.js is now enqued by default.
