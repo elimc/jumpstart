@@ -14,11 +14,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 // Normalize
 @import "../bower_components/foundation/scss/normalize";
 
-// Load Foundation
-@import "../bower_components/foundation/scss/foundation";
-
 // Load theme dependencies
-@import "./scss/dependencies/settings"; // Customize Zurb Foundation For Sites.
+@import "./scss/dependencies/settings"; // Customize Zurb Foundation. Don't ovverwrite this file.
+@import "../bower_components/foundation/scss/foundation"; // Load Zurb Foundation.
 @import "./scss/dependencies/rem"; // Convert px to rem with rem().
 
 //Load theme styles
