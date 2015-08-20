@@ -15,14 +15,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "../bower_components/foundation/scss/normalize";
 
 // Load theme dependencies
+@import "./scss/components/fonts"; // Load any fonts.
 @import "./scss/dependencies/settings"; // Customize Zurb Foundation. Don't ovverwrite this file.
 @import "../bower_components/foundation/scss/foundation"; // Load Zurb Foundation.
 @import "./scss/dependencies/rem"; // Convert px to rem with rem().
 
 //Load theme styles
 @import "./scss/components/base";
-@import "./scss/components/constants";
-@import "./scss/components/fonts"; // Load any fonts.
 @import "./scss/components/buttons";
 @import "./scss/components/forms";
 @import "./scss/components/header";

@@ -16,7 +16,7 @@
  */
 function jumpstart_excerpt() {
     global $post;
-    return ' . . . <p></p><a href="'. get_permalink( $post->ID ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">Read More</a>';
+    return ' . . . <p></p><a href="'. get_permalink( $post->ID ) . '" title="' . esc_attr( get_the_title( $post->ID ) ) . '">Read More</a>';
 }
 add_filter( 'excerpt_more', 'jumpstart_excerpt', 999 );
 
