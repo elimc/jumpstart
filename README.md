@@ -6,7 +6,7 @@ A combination of Foundation, SASS, Gulp, and Browsersync to create a modern Word
 Most Recent: **Version 0.1.1 (Sep 15, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
 
 # Looking for a way to do this automatically?
- 
+
 You may want to check out [jumpstart Install Script](https://github.com/elimc/jumpstart-install-script). The `jumpstart Install Script` is a sick [Bash](https://www.wikiwand.com/en/Bash_(Unix_shell)) script that asks you some questions and then automatically installs your whole site with BrowserSync and Gulp correctly configured.
 
 # Folder Structure
