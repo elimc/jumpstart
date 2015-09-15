@@ -1,5 +1,8 @@
 **Changelog**
 =============
+### 0.1.1 (Sep 15, 2015)
+* Deletes branding folder, because WordPress includes favicon generator in WordPress 4.3.
+
 ### 0.1.0 (Aug 11, 2015)
 * Updated Apple Touch Icon support.
 * Friendly message to < IE9 to upgrade.
