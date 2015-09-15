@@ -11,7 +11,7 @@
 function jumpstart_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/lib/branding/login-logo.png);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/lib/images/login-logo.png);
             width: 80px;
         }
     </style>
