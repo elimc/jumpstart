@@ -21,10 +21,12 @@ You may want to check out [jumpstart Install Script](https://github.com/elimc/ju
  │   ├── inc — All PHP classes and function files. These have been abstracted from functions.php.
  │   └── js — All js files.
  │       ├── custom — JS written by developer.
+ │       ├── min — Minified JS to be loaded into theme.
  │		 └── vendor — JS written by a third party.
  │   ├── scss — All cutom SASS files and partials.
  │   ├── jumpstart-init.php — Bootstrap file to load files in the inc directory.
  │   └── style.scss — Loads all SCSS files.
+ ├── parts — Template parts inside the loop. 
 ```
 # Install
 
@@ -58,7 +60,7 @@ In the image above, the URL for SSH Tunneling is https://tunnel.localtunnel.me. 
 ![URL options](./github_docs/browsersync_urls_web.png)
 
 # Working with Vagrant
-If you work with a team of developers, you might want to use Vagrant. In that case, check out [jVVV](https://github.com/elimc/jumpstart-vvv).
+If you work with a team of developers, you may want to use Vagrant. I am currently researching combining Vagrant with Ansible and jumpstart.
 
 # TODO
 
