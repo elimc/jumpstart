@@ -14,7 +14,7 @@ h1 {
     color: inherit;
 }
 
-img {
+img, video, object {
     max-width: 100%;
     height: auto;
 }
@@ -34,11 +34,6 @@ img {
     margin-left: auto; 
     display: block; 
     clear: both; 
-}
-
-video, object {
-    max-width: 100%;
-    height: auto;
 }
 
 pre {

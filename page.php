@@ -7,25 +7,25 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>
 
     <main id="page" role="main">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+    <?php
 
-            <?php get_template_part( './parts/content', 'page' ); ?>
+        while ( have_posts() ) { the_post();
+            get_template_part( './parts/content', 'page' );
 
-            <?php
-                // If comments are open or we have at least one comment, load up the comment template
-                if ( comments_open() || '0' != get_comments_number() ) :
-                    comments_template();
-                endif;
-            ?>
+            // If comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() || get_comments_number() ) {
+                comments_template();
+            }
+        } // end of the loop.
 
-        <?php endwhile; // end of the loop. ?>
+    ?>
 
     </main><!-- #main -->
 

@@ -1,26 +1,36 @@
 <?php
 /**
- * The template used for displaying page content in page.php
- * 
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template part for displaying page content in page.php.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  */
 ?>
 
 <article>
 	<header>
-		<?php the_title( '<h1>', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div>
-		<?php the_content(); ?>
-		<?php
+		<?php the_content();
 			wp_link_pages( array(
-				'before' => '<div>' . __( 'Pages:', 'jumpstart' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jumpstart' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
+
 	<footer>
-		<?php edit_post_link( __( 'Edit', 'jumpstart' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post */
+					esc_html__( 'Edit %s', 'jumpstart' ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

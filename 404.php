@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>
@@ -10,13 +10,14 @@ get_header(); ?>
     <main id="not-found" role="main">
 
         <header>
-            <h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'jumptstart' ); ?></h1>
+            <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'jumptstart' ); ?></h1>
         </header><!-- .page-header -->
 
         <section>
-            <p><?php _e( 'Sorry, something went wrong.', 'jumptstart' ); ?></p>
+            <p><?php esc_html_e( 'Sorry, something went wrong.', 'jumptstart' ); ?></p>
         </section><!-- page-content -->
 
     </main><!-- main -->
 
-<?php get_footer(); ?>
+<?php
+get_footer();
