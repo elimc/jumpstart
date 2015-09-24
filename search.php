@@ -28,8 +28,6 @@ get_header(); ?>
                 get_template_part( './parts/content', 'search' );
             }
 
-            jumpstart_paging_nav();
-
         } else {
 			get_template_part( './parts/content', 'none' );
         }
