@@ -1,5 +1,8 @@
 **Changelog**
 =============
+### 0.1.2 (Sep 23, 2015)
+* Moves template parts into a parts folder for better separation of files.
+
 ### 0.1.1 (Sep 15, 2015)
 * Deletes branding folder, because WordPress includes favicon generator in WordPress 4.3.
 
