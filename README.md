@@ -22,7 +22,7 @@ You may want to check out [jumpstart Install Script](https://github.com/elimc/ju
  │   └── js — All js files.
  │       ├── custom — JS written by developer.
  │       ├── min — Minified JS to be loaded into theme.
- │		 └── vendor — JS written by a third party.
+ │       └── vendor — JS written by a third party.
  │   ├── scss — All cutom SASS files and partials.
  │   ├── jumpstart-init.php — Bootstrap file to load files in the inc directory.
  │   └── style.scss — Loads all SCSS files.
