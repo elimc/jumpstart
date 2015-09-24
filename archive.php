@@ -63,7 +63,7 @@ get_header(); ?>
         }
             jumpstart_paging_nav();
         } else {
-            get_template_part( 'content', 'none' );
+            get_template_part( './parts/content', 'none' );
         }
 
         ?>
