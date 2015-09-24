@@ -3,7 +3,7 @@
 
 A combination of Foundation, SASS, Gulp, and Browsersync to create a modern WordPress theme with a sophisticated build process.
 
-Most Recent: **Version 0.1.2 (Sep 23, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
+Most Recent: **Version 1.0.0 (Sep 23, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
 
 # Looking for a way to do this automatically?
 

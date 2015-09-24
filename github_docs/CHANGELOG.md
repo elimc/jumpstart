@@ -1,5 +1,8 @@
 **Changelog**
 =============
+### 1.0.0 (Sep 23, 2015)
+* Adds numerous semantic and structural changes to almost every file (with inspiration from _s).
+
 ### 0.1.2 (Sep 23, 2015)
 * Moves template parts into a parts folder for better separation of files.
 * Adds some generic image alignment styles and generic comments styles.
