@@ -25,6 +25,8 @@ require_once 'inc/constants.php';                               // Define consta
 require_once 'inc/enque.php';                                   // Enque theme scripts and styles.
 require_once 'inc/functions.php';                               // Write any custom, theme specific functionality; a blank canvas ...
 require_once 'inc/nav.php';                                     // Register custom navigation menus.
+require_once 'inc/custom-header.php';                           // Display information dynamically.
+require_once 'inc/customizer.php';                              // Display information dynamically.
 require_once 'inc/template-tags.php';                           // Display information dynamically.
 require_once 'inc/clean-front-end.php';                         // Clean up WP junk code, on the front-end.
 require_once 'inc/admin.php';                                   // Customize the admin section.
