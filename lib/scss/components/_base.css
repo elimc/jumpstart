@@ -7,15 +7,17 @@ html {
     box-sizing: border-box;
     /*Changes the default tap highlight to be completely transparent in iOS.*/
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /*Set a base font-size for using rems*/
     font-size:62.5%;
-}
-
-body { 
-    font-size: 1.6rem;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+body {
+    background: #fff;
+    font-size: 1.6rem;
 }
 
 body,

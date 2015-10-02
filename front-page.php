@@ -9,13 +9,6 @@ get_header(); ?>
 
     <main id="front-page" role="main">
 
-
-        <section class="row">
-          <div class="quarter">1</div>
-          <div class="half">2</div>
-          <div class="quarter">3</div>
-        </section>
-
     <?php
 
         while ( have_posts() ) { the_post();
