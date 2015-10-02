@@ -1,5 +1,9 @@
 **Changelog**
 =============
+### 2.0.0 (Oct 2, 2015)
+* Zurb Foundation removed and replaced with Lost Grid.
+* PostCSS has replaced SASS
+
 ### 1.0.0 (Sep 23, 2015)
 * Adds numerous semantic and structural changes to almost every file (with inspiration from _s).
 

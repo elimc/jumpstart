@@ -3,21 +3,40 @@
 
 A combination of Foundation, SASS, Gulp, and Browsersync to create a modern WordPress theme with a sophisticated build process.
 
-Most Recent: **Version 1.0.0 (Sep 23, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
+Most Recent: **Version 2.0.0 (Oct 2, 2015)** -- See [Changelog](./github_docs/CHANGELOG.md)
 
-# Looking for a way to do this automatically?
+# Introducing jumpstart V2!
+The latest version of jumpstart is more elegant, much smaller, and much faster to work with. There are a few major under the hood changes, including the replacement of [Zurb Foundation](http://foundation.zurb.com/) with [Lost Grid](https://github.com/corysimmons/lost), and the replacement of SASS with [PostCSS](https://github.com/postcss/postcss). Here are the details of the new components:
+
+##### Lost Grid
+[Lost Grid](https://github.com/corysimmons/lost) is the most advanced grid system in existence. It replaces all of the cruft in a system like Zurb Foundation or Twitter Bootstrap so that your style sheets are extremely small. That's correct, Zurb Foundation was a good framework, but it no longer part of jumpstart. But, once you try Lost, you will no longer miss it. Creating a grid is incredibly easy. While jumpstart is currently missing many of the useful Foundation JS modules, new ones will be added to this theme over time.
+
+##### PostCSS
+[SASS is dead](https://www.youtube.com/watch?v=1yUFTrAxTzg). [PostCSS](https://github.com/postcss/postcss) is the future. One nice benefit of PostCSS include a major [speed increase](https://github.com/postcss/benchmark):
+
+```
+PostCSS:   61 ms
+Rework:    72 ms   (1.2 times slower)
+libsass:   129 ms  (2.1 times slower)
+Less:      152 ms  (2.5 times slower)
+Stylus:    161 ms  (2.6 times slower)
+Stylecow:  171 ms  (2.8 times slower)
+Ruby Sass: 1042 ms (17.0 times slower)
+```
+
+Concerned about having to learn Yet Another PreProcessor syntax? Don't be. PostCSS is capable of accepting SASSy syntax. So you can continue writing code like you always have. Additionally, there are modules you can plug in to PostCSS, like Lost Grid, that allow completely new ways of writing code. You are only limited by your own imagination.
+
+# Looking for a way to do install jumpstart automatically?
 
 You may want to check out [jumpstart Install Script](https://github.com/elimc/jumpstart-install-script). The `jumpstart Install Script` is a sick [Bash](https://www.wikiwand.com/en/Bash_(Unix_shell)) script that asks you some questions and then automatically installs your whole site with BrowserSync and Gulp correctly configured.
 
 # Folder Structure
 ```
 ./jumpstart
- ├── bower_components ─ Zurb's Foundation Framework ─ You can update this with a `bower update` command in the CLI.
  ├── github_docs ─ Documentation for github readers.
  ├── lib ─ all of the custom functionality of the site.
- │   ├── branding — All web associated branding, e.g, favicon, login-logo, etc ...
  │   ├── fonts — Any web fonts to be loaded locally.
- │   ├── images — All images to be used in the site. These images aren't related to the companies branding.
+ │   ├── images — All images to be used in the site.
  │   ├── inc — All PHP classes and function files. These have been abstracted from functions.php.
  │   └── js — All js files.
  │       ├── custom — JS written by developer.
@@ -25,7 +44,7 @@ You may want to check out [jumpstart Install Script](https://github.com/elimc/ju
  │       └── vendor — JS written by a third party.
  │   ├── scss — All cutom SASS files and partials.
  │   ├── jumpstart-init.php — Bootstrap file to load files in the inc directory.
- │   └── style.scss — Loads all SCSS files.
+ │   └── style.scss— Loads all Sartials
  ├── parts — Template parts inside the loop. 
 ```
 # Install
@@ -65,6 +84,7 @@ If you work with a team of developers, you may want to use Vagrant. I am current
 # TODO
 
 * Improve integration with Vagrant
+* Integration of JS components to replace role of Foundation in previous versions
 
 # Authors
 

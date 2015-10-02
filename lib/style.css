@@ -1,0 +1,32 @@
+/*!
+Theme Name: jumpstart
+Theme URI: https://github.com/elimc/jumpstart/
+Author: Eli McMakin
+Author URI: http://elimcmakin.com
+Description: This is the official jumpstart theme. WARNING: Deleting this theme is a poor life choice!
+Version: 2.0.0
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+/* Normalize */
+/*@import "../bower_components/foundation/css/normalize";*/
+
+/* Load theme dependencies */
+@import "./scss/dependencies/normalize";
+@import "./scss/components/fonts";
+/*@import "./scss/dependencies/settings";*/ 
+/*@import "../bower_components/foundation/scss/foundation";*/ 
+/*@import "./scss/dependencies/rem";*/ 
+
+/* Load theme styles */
+@import "./scss/components/base";
+@import "./scss/components/type_elements";
+@import "./scss/components/buttons";
+@import "./scss/components/forms";
+@import "./scss/components/header";
+@import "./scss/components/footer";
+@import "./scss/components/comments";
+@import "./scss/components/media";

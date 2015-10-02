@@ -1,0 +1,58 @@
+/**
+ * Type elements. Change as needed.
+ */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; }
+
+p {
+    margin: 0; }
+
+a {
+    color: blue;
+    text-decoration: none;
+
+    &:visited {
+        color: purple;
+    }
+    
+    &:active,
+    &:hover,
+    &:focus {
+        color: red;
+    }
+}
+
+pre {
+    background: #eee;
+    border: 1px solid #cecece;
+    padding: 10px;
+}
+
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted #eee;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol, ul, dl {
+    margin: 0; }
+
+ol ol, ul ul, ol ul, ul ol {
+    margin: 0; }
+
+dt {
+    margin: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+blockquote {
+    margin: 0;
+}

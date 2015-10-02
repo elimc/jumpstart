@@ -29,11 +29,24 @@ var gulp            = require('gulp'),
     uglify          = require('gulp-uglify'),
     rename          = require('gulp-rename'),
     autoprefixer    = require('gulp-autoprefixer');
+    postcss         = require('gulp-postcss');
+    precss          = require('precss');
+    reporter        = require('postcss-reporter');
+    importer        = require('postcss-partial-import');
+    mixins          = require('postcss-sassy-mixins');
+    variables       = require('postcss-simple-vars');
+    nested          = require('postcss-nested');
+    autoprefixer    = require('autoprefixer');
+    cssnano         = require('gulp-cssnano');
+    mincss          = require('mincss');
+    lost            = require('lost');
+    csswring        = require('csswring');
+    mqpacker        = require('css-mqpacker');
     reload          = browserSync.reload;
 
 // Define sources of files to monitor.
-var sassWatch       = ['./lib/scss/**/*.scss', './lib/style.scss'],
-    sassSource      = './lib/style.scss',
+var sassWatch       = ['./lib/scss/**/*.css', './lib/style.css'],
+    sassSource      = './lib/style.css',
     sassDestination = './',
     foundationWatch = './lib/js/vendor/foundation-bootstrap.js',
     jsWatch         = ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
@@ -43,15 +56,20 @@ var sassWatch       = ['./lib/scss/**/*.scss', './lib/style.scss'],
 
 // Compile Sass file to CSS, and updates browsers.
 gulp.task('sass', function() {
+    var processors = [
+        precss,
+        lost,
+        autoprefixer({
+            browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4'],
+            cascade: false
+        }),
+        mqpacker,
+        csswring
+    ];
     return gulp.src(sassSource)
-        .pipe(plumber())
-        .pipe(sourcemaps.init())  // Process the original sources
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(autoprefixer({
-                browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4'],
-                cascade: false
-            }))
-        .pipe(sourcemaps.write('./')) // Add the map to modified source.
+        .pipe(sourcemaps.init())
+        .pipe(postcss(processors))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(sassDestination))
         .pipe(browserSync.stream());
 });
@@ -109,7 +127,7 @@ gulp.task('js', function() {
 
 
 // Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
-gulp.task('default', ['sass', 'foundation', 'js'], function() {
+gulp.task('default', ['sass', 'js'], function() {
 
     // If browserSync is enabled
     if( bsProxy ) {
@@ -126,7 +144,7 @@ gulp.task('default', ['sass', 'foundation', 'js'], function() {
 
     // Call specific functions when specific file is updated and saved.
     gulp.watch(sassWatch, ['sass']);
-    gulp.watch(foundationWatch, ['foundation']);
+//    gulp.watch(foundationWatch, ['foundation']);
     gulp.watch(jsWatch, ['js']);
     gulp.watch(phpWatch).on('change', browserSync.reload);
 });
