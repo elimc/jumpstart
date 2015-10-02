@@ -7,10 +7,10 @@ input[type="submit"] {
 	border-radius: 0;
 	background: white;
 	box-shadow: none;
-	color: rgba(0, 0, 0, .8);
+	color: #333;
 	line-height: 1;
 	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	text-shadow: none;
 
 	&:hover {
 		border-color: #333;

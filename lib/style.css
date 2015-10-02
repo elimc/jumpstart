@@ -11,15 +11,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
-/* Normalize */
-/*@import "../bower_components/foundation/css/normalize";*/
+
 
 /* Load theme dependencies */
 @import "./scss/dependencies/normalize";
 @import "./scss/components/fonts";
-/*@import "./scss/dependencies/settings";*/ 
-/*@import "../bower_components/foundation/scss/foundation";*/ 
-/*@import "./scss/dependencies/rem";*/ 
 
 /* Load theme styles */
 @import "./scss/components/base";

@@ -7,10 +7,26 @@ html {
     box-sizing: border-box;
     /*Changes the default tap highlight to be completely transparent in iOS.*/
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size:62.5%;
+}
+
+body { 
+    font-size: 1.6rem;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #333;
+    font-family: sans-serif;
+	font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 /* Style the browserupgrade message if the user does not have > ie8 */
@@ -27,4 +43,40 @@ html {
 }
 
 /*Remove outline in Chrome*/
-:focus {outline:0 !important;}
+:focus {
+    outline:0 !important;}
+
+hr {
+	border: 0;
+	height: 1px;
+    margin: 0;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0;
+}

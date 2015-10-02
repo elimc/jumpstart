@@ -4,22 +4,31 @@
 h1, h2, h3, h4, h5, h6 {
     margin: 0; }
 
+a {
+	color: blue;
+
+	&:visited {
+		color: purple;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: red;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
 p {
     margin: 0; }
 
-a {
-    color: blue;
-    text-decoration: none;
-
-    &:visited {
-        color: purple;
-    }
-    
-    &:active,
-    &:hover,
-    &:focus {
-        color: red;
-    }
+dfn, cite, em, i {
+	font-style: italic;
 }
 
 pre {
@@ -28,9 +37,22 @@ pre {
     padding: 10px;
 }
 
-abbr[title] {
-    cursor: help;
-    border-bottom: 1px dotted #eee;
+code, kbd, tt, var {
+    font-size: 1.6rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+
+mark, ins {
+	background: #ccc;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
 }
 
 address {
@@ -40,10 +62,21 @@ address {
 }
 
 ol, ul, dl {
+    margin: 0;
+    padding-left: 2.5rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
     margin: 0; }
 
-ol ol, ul ul, ol ul, ul ol {
-    margin: 0; }
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 0;
+}
 
 dt {
     margin: 0;
@@ -53,6 +86,12 @@ dd {
     margin: 0;
 }
 
-blockquote {
+blockquote, q {
     margin: 0;
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
 }
