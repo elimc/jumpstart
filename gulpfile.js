@@ -21,24 +21,13 @@ var bsProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
 
 // Identify dependencies.
 var gulp            = require('gulp'),
-    sass            = require('gulp-sass'),
     browserSync     = require('browser-sync').create(),
     sourcemaps      = require('gulp-sourcemaps');
-    plumber         = require('gulp-plumber');
     concat          = require('gulp-concat');
     uglify          = require('gulp-uglify'),
-    rename          = require('gulp-rename'),
-    autoprefixer    = require('gulp-autoprefixer');
     postcss         = require('gulp-postcss');
     precss          = require('precss');
-    reporter        = require('postcss-reporter');
-    importer        = require('postcss-partial-import');
-    mixins          = require('postcss-sassy-mixins');
-    variables       = require('postcss-simple-vars');
-    nested          = require('postcss-nested');
     autoprefixer    = require('autoprefixer');
-    cssnano         = require('gulp-cssnano');
-    mincss          = require('mincss');
     lost            = require('lost');
     csswring        = require('csswring');
     mqpacker        = require('css-mqpacker');
