@@ -1,0 +1,19 @@
+{
+  "name": "jumpstart",
+  "version": "2.0.0",
+  "homepage": "https://github.com/elimc/jumpstart",
+  "authors": [
+    "Eli McMakin <elimc184@outlook.com>"
+  ],
+  "description": "A Blank WordPress theme with some sick features.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }  
+}

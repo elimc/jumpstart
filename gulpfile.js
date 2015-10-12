@@ -19,32 +19,43 @@
  */
 var bsProxy = "127.0.0.1/jump_start/"; // If === null, browser sync is disabled!
 
-// Identify dependencies.
-var gulp            = require('gulp'),
-    browserSync     = require('browser-sync').create(),
-    sourcemaps      = require('gulp-sourcemaps');
-    concat          = require('gulp-concat');
-    uglify          = require('gulp-uglify'),
-    postcss         = require('gulp-postcss');
-    precss          = require('precss');
-    autoprefixer    = require('autoprefixer');
-    lost            = require('lost');
-    csswring        = require('csswring');
-    mqpacker        = require('css-mqpacker');
-    reload          = browserSync.reload;
+// Define dependencies.
+var gulp                = require('gulp'),
+    sourcemaps          = require('gulp-sourcemaps');
+    concat              = require('gulp-concat');
+    uglify              = require('gulp-uglify'),
+    postcss             = require('gulp-postcss');
+    precss              = require('precss');
+    autoprefixer        = require('autoprefixer');
+    lost                = require('lost');
+    csswring            = require('csswring');
+    mqpacker            = require('css-mqpacker');
+    browserSync         = require('browser-sync').create(),
+    reload              = browserSync.reload;
 
-// Define sources of files to monitor.
-var sassWatch       = ['./lib/scss/**/*.css', './lib/style.css'],
-    sassSource      = './lib/style.css',
-    sassDestination = './',
-    foundationWatch = './lib/js/vendor/foundation-bootstrap.js',
-    jsWatch         = ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
-    phpWatch        = './**/*.php';
+// Define paths.
+var paths = {
+    sassWatch           : ['./lib/scss/**/*.css', './lib/style.css'],
+    sassSource          : './lib/style.css',
+    sassDestination     : './',
+    foundationWatch     : './lib/js/vendor/foundation-bootstrap.js',
+    jsWatch             : ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
+    phpWatch            : './**/*.php'
+};
 
+// Concatenate and minify JS. Refresh browsers.
+function scripts() {
+    return gulp.src('./lib/js/custom/*.js')
+        .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./lib/js/min'))
+        .pipe(browserSync.stream());
+}
 
-
-// Compile Sass file to CSS, and updates browsers.
-gulp.task('sass', function() {
+// Transpile styles to CSS, minify output, and refresh browsers, with sourcemap support.
+function styles() {
+    
+    // Set out PostCSS vars.
     var processors = [
         precss,
         lost,
@@ -55,25 +66,48 @@ gulp.task('sass', function() {
         mqpacker,
         csswring
     ];
-    return gulp.src(sassSource)
+    
+    return gulp.src(paths.sassSource)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(sassDestination))
+        .pipe(gulp.dest(paths.sassDestination))
         .pipe(browserSync.stream());
-});
+}
 
-
+// The default task (called when you run `gulp` from cli).
+gulp.task('default', gulp.series(styles, scripts, function(done) {
+    
+    // If browserSync is enabled ...
+    if( bsProxy ) {
+        // Set the proxy. You followed Step 1, right?
+        browserSync.init({
+            proxy: bsProxy,
+            tunnel: "tunnel",  // Set the SSH tunnel for mobile testing.
+            snippetOptions: {  // Turn off BS while in admin https://github.com/BrowserSync/browser-sync/issues/373
+                whitelist: ["wp-admin/admin-ajax.php"],  // whitelist checked first.
+                blacklist: ["wp-admin/**"]
+            }
+        });
+    }
+    
+    // Run tasks when a file changes.
+    gulp.watch(paths.phpWatch, reload);
+    gulp.watch(paths.jsWatch, gulp.series(scripts));
+    gulp.watch(paths.sassWatch, gulp.series(styles));
+    
+    done();
+}));
 
 // Concatenates Foundation's JS, for fewer HTTP requests, and spits out code to browser.
-gulp.task('foundation', function() {
-    return gulp.src([
+//gulp.task('foundation', function() {
+//    return gulp.src([
         
         // Foundation core - needed if you want to use any of the components below
-        './bower_components/foundation/js/foundation/foundation.js',
-        './bower_components/foundation/js/vendor/fastclick.js',
-        './bower_components/foundation/js/vendor/placeholder.js',
-        './bower_components/foundation/js/vendor/modernizr.js',
+//        './bower_components/foundation/js/foundation/foundation.js',
+//        './bower_components/foundation/js/vendor/fastclick.js',
+//        './bower_components/foundation/js/vendor/placeholder.js',
+//        './bower_components/foundation/js/vendor/modernizr.js',
 
         // Pick the componenets you need in your project
         //'./bower_components/foundation/js/foundation/foundation.abide.js',
@@ -94,46 +128,10 @@ gulp.task('foundation', function() {
         //'./bower_components/foundation/js/foundation/foundation.topbar.js', 
           		  
         // Initializes Foundation JS.
-        './lib/js/vendor/foundation-bootstrap.js'
-    ])
-        .pipe(concat('foundation.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./lib/js/min'))
-        .pipe(browserSync.stream());
-});
-
-
-
-// Reloads custom JS in browser.
-gulp.task('js', function() {
-    return gulp.src('./lib/js/custom/*.js')
-        .pipe(concat('scripts.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./lib/js/min'))
-        .pipe(browserSync.stream());
-});
-
-
-
-// Set up browser-sync and compile SASS when "gulp" is entered in the CLI.
-gulp.task('default', ['sass', 'js'], function() {
-
-    // If browserSync is enabled
-    if( bsProxy ) {
-        // Set the proxy. You followed Step 1, right?
-        browserSync.init({
-            proxy: bsProxy,
-            tunnel: "tunnel",  // Set the SSH tunnel for mobile testing.
-            snippetOptions: {  // Turn off BS while in admin https://github.com/BrowserSync/browser-sync/issues/373
-                whitelist: ["wp-admin/admin-ajax.php"],  // whitelist checked first.
-                blacklist: ["wp-admin/**"]
-            }
-        });
-    }
-
-    // Call specific functions when specific file is updated and saved.
-    gulp.watch(sassWatch, ['sass']);
-//    gulp.watch(foundationWatch, ['foundation']);
-    gulp.watch(jsWatch, ['js']);
-    gulp.watch(phpWatch).on('change', browserSync.reload);
-});
+//        './lib/js/vendor/foundation-bootstrap.js'
+//    ])
+//        .pipe(concat('foundation.min.js'))
+//        .pipe(uglify())
+//        .pipe(gulp.dest('./lib/js/min'))
+//        .pipe(browserSync.stream());
+//});

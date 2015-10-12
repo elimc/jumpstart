@@ -8,7 +8,7 @@
 get_header(); ?>
 
     <main id="front-page" role="main">
-
+        
     <?php
 
         while ( have_posts() ) { the_post();
