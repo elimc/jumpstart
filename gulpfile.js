@@ -38,7 +38,7 @@ var paths = {
     sassWatch           : ['./lib/scss/**/*.css', './lib/style.css'],
     sassSource          : './lib/style.css',
     sassDestination     : './',
-    foundationWatch     : './lib/js/vendor/foundation-bootstrap.js',
+    vendorWatch         : ['./lib/js/vendor/*.js', './lib/js/vendor/**/*.js'],
     jsWatch             : ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
     phpWatch            : './**/*.php'
 };
@@ -47,6 +47,17 @@ var paths = {
 function scripts() {
     return gulp.src('./lib/js/custom/*.js')
         .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./lib/js/min'))
+        .pipe(browserSync.stream());
+}
+
+function vendorScripts() {
+    return gulp.src([
+        // Pick the componenets you need in your project
+        './lib/js/vendor/*.js'
+    ])
+        .pipe(concat('vendorScripts.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./lib/js/min'))
         .pipe(browserSync.stream());
@@ -76,7 +87,7 @@ function styles() {
 }
 
 // The default task (called when you run `gulp` from cli).
-gulp.task('default', gulp.series(styles, scripts, function(done) {
+gulp.task('default', gulp.series(styles, scripts, vendorScripts, function(done) {
     
     // If browserSync is enabled ...
     if( bsProxy ) {
@@ -94,44 +105,8 @@ gulp.task('default', gulp.series(styles, scripts, function(done) {
     // Run tasks when a file changes.
     gulp.watch(paths.phpWatch, reload);
     gulp.watch(paths.jsWatch, gulp.series(scripts));
+    gulp.watch(paths.vendorWatch, gulp.series(vendorScripts));
     gulp.watch(paths.sassWatch, gulp.series(styles));
     
     done();
 }));
-
-// Concatenates Foundation's JS, for fewer HTTP requests, and spits out code to browser.
-//gulp.task('foundation', function() {
-//    return gulp.src([
-        
-        // Foundation core - needed if you want to use any of the components below
-//        './bower_components/foundation/js/foundation/foundation.js',
-//        './bower_components/foundation/js/vendor/fastclick.js',
-//        './bower_components/foundation/js/vendor/placeholder.js',
-//        './bower_components/foundation/js/vendor/modernizr.js',
-
-        // Pick the componenets you need in your project
-        //'./bower_components/foundation/js/foundation/foundation.abide.js',
-        //'./bower_components/foundation/js/foundation/foundation.accordion.js',
-        //'./bower_components/foundation/js/foundation/foundation.alert.js',
-        //'./bower_components/foundation/js/foundation/foundation.clearing.js',
-        //'./bower_components/foundation/js/foundation/foundation.dropdown.js',
-        //'./bower_components/foundation/js/foundation/foundation.equalizer.js',
-        //'./bower_components/foundation/js/foundation/foundation.interchange.js',
-        //'./bower_components/foundation/js/foundation/foundation.joyride.js',
-        //'./bower_components/foundation/js/foundation/foundation.magellan.js',
-        //'./bower_components/foundation/js/foundation/foundation.offcanvas.js',
-        //'./bower_components/foundation/js/foundation/foundation.orbit.js',
-        //'./bower_components/foundation/js/foundation/foundation.reveal.js',
-        //'./bower_components/foundation/js/foundation/foundation.slider.js',
-        //'./bower_components/foundation/js/foundation/foundation.tab.js',
-        //'./bower_components/foundation/js/foundation/foundation.tooltip.js',
-        //'./bower_components/foundation/js/foundation/foundation.topbar.js', 
-          		  
-        // Initializes Foundation JS.
-//        './lib/js/vendor/foundation-bootstrap.js'
-//    ])
-//        .pipe(concat('foundation.min.js'))
-//        .pipe(uglify())
-//        .pipe(gulp.dest('./lib/js/min'))
-//        .pipe(browserSync.stream());
-//});

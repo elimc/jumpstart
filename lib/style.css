@@ -26,3 +26,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "./scss/components/footer";
 @import "./scss/components/comments";
 @import "./scss/components/media";
+
+/* Load styles for third-party javascript */
+@import "./scss/vendors/pushy";
