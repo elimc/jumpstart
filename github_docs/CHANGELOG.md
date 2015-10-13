@@ -2,9 +2,10 @@
 =============
 ### 2.0.0 (Oct 13, 2015)
 * Zurb Foundation removed and replaced with Lost Grid.
-* PostCSS has replaced SASS
+* PostCSS has replaced SASS.
 * Node 4.0
 * Gulp 4.0
+* Adds off-canvas nagigation menu module.
 
 ### 1.0.0 (Sep 23, 2015)
 * Adds numerous semantic and structural changes to almost every file (with inspiration from _s).
