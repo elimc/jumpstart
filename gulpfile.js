@@ -66,7 +66,7 @@ function vendorScripts() {
 // Transpile styles to CSS, minify output, and refresh browsers, with sourcemap support.
 function styles() {
     
-    // Set out PostCSS vars.
+    // Set our PostCSS vars.
     var processors = [
         precss,
         lost,
