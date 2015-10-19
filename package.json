@@ -1,6 +1,6 @@
 {
   "name": "jumpstart",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Gulp.js config to compile SASS and set up browser-sync.",
   "main": "index.js",
   "scripts": {
@@ -17,16 +17,16 @@
   },
   "homepage": "https://github.com/elimc/jumpstart",
   "devDependencies": {
+    "autoprefixer": "^6.0.3",
     "browser-sync": "^2.7.13",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-postcss": "^6.0.0",
-    "precss": "^1.2.3",
-    "csswring": "^3.0.1",
-    "lost": "^6.6.2",
     "css-mqpacker": "^4.0.0",
-    "autoprefixer": "^6.0.3"
+    "csswring": "^3.0.7",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "lost": "^6.6.2",
+    "precss": "^1.2.3"
   }
 }
