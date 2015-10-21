@@ -1,0 +1,86 @@
+/**
+ *This base style sheet establishes some good style baselines. Change as needed.
+ */
+
+html {
+    /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: border-box;
+    /*Changes the default tap highlight to be completely transparent in iOS.*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /*Set a base font-size for using rems*/
+    font-size:62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #fff;
+    font-size: 1.6rem;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #333;
+    font-family: sans-serif;
+	font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Style the browserupgrade message if the user does not have > ie8 */
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+::-moz-selection, ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*Remove outline in Chrome*/
+:focus {
+    outline:0 !important;}
+
+hr {
+    display: block;
+	border: 0;
+	height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0;
+}
