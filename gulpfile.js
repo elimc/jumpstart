@@ -68,7 +68,7 @@ function styles() {
     
     // Set our PostCSS vars.
     var processors = [
-        precss,
+        precss({ 'import': { extension: 'scss' }}),
         lost,
         autoprefixer({
             browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4'],
