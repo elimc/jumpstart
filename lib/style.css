@@ -14,18 +14,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 /* Load theme dependencies */
-@import "./scss/dependencies/normalize";
-@import "./scss/dependencies/fonts";
+@import "./css/dependencies/normalize";
+@import "./css/dependencies/fonts";
 
 /* Load theme styles */
-@import "./scss/components/base";
-@import "./scss/components/type_elements";
-@import "./scss/components/buttons";
-@import "./scss/components/forms";
-@import "./scss/components/header";
-@import "./scss/components/footer";
-@import "./scss/components/comments";
-@import "./scss/components/media";
+@import "./css/components/base";
+@import "./css/components/type_elements";
+@import "./css/components/buttons";
+@import "./css/components/forms";
+@import "./css/components/header";
+@import "./css/components/footer";
+@import "./css/components/comments";
+@import "./css/components/media";
 
 /* Load styles for third-party javascript */
-@import "./scss/vendors/pushy";
+@import "./css/vendors/pushy";

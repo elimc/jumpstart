@@ -35,7 +35,7 @@ var gulp                = require('gulp'),
 
 // Define paths.
 var paths = {
-    sassWatch           : ['./lib/scss/**/*.css', './lib/style.css'],
+    sassWatch           : ['./lib/css/**/*.css', './lib/style.css'],
     sassSource          : './lib/style.css',
     sassDestination     : './',
     vendorWatch         : ['./lib/js/vendor/*.js', './lib/js/vendor/**/*.js'],
@@ -68,7 +68,7 @@ function styles() {
     
     // Set our PostCSS vars.
     var processors = [
-        precss({ 'import': { extension: 'scss' }}),
+        precss,
         lost,
         autoprefixer({
             browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4'],

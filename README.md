@@ -87,7 +87,7 @@ Gulp Instructions:
 ##### Local URL
 Enter `gulp` into the Command Line Interface (CLI), thus loading the browser with the URL [http://localhost:3000](#), after the script has completed installing everything. Any changes you make to your files in your project will automatically be refreshed on this page. In order to stop this process, simply enter `control-C` (sometimes written as `^C` on Macs) in the CLI. This will stop any Unix process. To restart this process, simply enter `gulp` in the CLI. This will load another browser window with the URL [http://localhost:3000](#).
 
-![URL options](./github_docs/gulp.jpg)
+![URL options](./github_docs/gulp4.jpg)
 
 ##### External URL
 While the Local URL is great for testing on your host machine, you might want to do Cross Device Testing on devices that are attached to your local Wi-Fi. For example, you might want to see automatic SASS injection/page reloading on your tablet or phone. For these devices you will use the External URL. In the image above, the External URL is [http://10.0.1.8:3000](#). Enter the External URL that you see in your CLI into your phone or tablet. As long as they are connected to the same Wi-Fi network as your computer, you will be synced.
