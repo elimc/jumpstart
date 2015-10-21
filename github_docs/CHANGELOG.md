@@ -1,5 +1,9 @@
 **Changelog**
 =============
+### 2.0.2 (Oct 21, 2015)
+* Updates csswring to eliminate deprecation errors.
+* Utilizes scss extension instead of css extension for better IDE compatibility.
+
 ### 2.0.0 (Oct 13, 2015)
 * Zurb Foundation removed and replaced with Lost Grid.
 * PostCSS has replaced SASS.
