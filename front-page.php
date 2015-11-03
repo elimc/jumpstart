@@ -8,11 +8,11 @@
 get_header(); ?>
 
     <main id="front-page" role="main">
-        
+
     <?php
 
         while ( have_posts() ) { the_post();
-            get_template_part( './parts/content', 'page' );
+//            get_template_part( './parts/content', 'page' );
         } // end of the loop.
 
     ?>
@@ -20,5 +20,5 @@ get_header(); ?>
     </main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

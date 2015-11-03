@@ -30,13 +30,14 @@ var gulp                = require('gulp'),
     lost                = require('lost');
     csswring            = require('csswring');
     mqpacker            = require('css-mqpacker');
+    rename              = require('gulp-rename');
     browserSync         = require('browser-sync').create(),
     reload              = browserSync.reload;
 
 // Define paths.
 var paths = {
-    sassWatch           : ['./lib/css/**/*.css', './lib/style.css'],
-    sassSource          : './lib/style.css',
+    sassWatch           : ['./lib/scss/**/*.scss', './lib/style.scss'],
+    sassSource          : './lib/style.scss',
     sassDestination     : './',
     vendorWatch         : ['./lib/js/vendor/*.js', './lib/js/vendor/**/*.js'],
     jsWatch             : ['./lib/js/dependencies/*.js', './lib/js/custom/*.js'],
@@ -68,19 +69,20 @@ function styles() {
     
     // Set our PostCSS vars.
     var processors = [
-        precss,
+        precss({ 'import': { extension: 'scss' }}),
         lost,
         autoprefixer({
             browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4'],
             cascade: false
         }),
-        mqpacker,
-        csswring
+        mqpacker
+//        csswring
     ];
     
     return gulp.src(paths.sassSource)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
+        .pipe(rename('./style.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.sassDestination))
         .pipe(browserSync.stream());

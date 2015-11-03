@@ -1,5 +1,11 @@
 **Changelog**
 =============
+### Version 2.1.0 (Nov 1, 2015)
+* Includes rename NPM module for SCSS useage.
+* CSS files now SCSS, for better IDE compatibility.
+* Adds Lost Grid example.
+* Fixes some Lost Grid issues that occured via the Gulp pipeline.
+
 ### 2.0.2 (Oct 21, 2015)
 * Updates csswring to eliminate deprecation errors.
 * Updates gulp image to show speed increase of jumpstart 2.0.

@@ -5,7 +5,7 @@
 
 A lightweight, non-opinionated, WordPress theme with a modern build system.
 
-Most Recent: **Version 2.0.2 (Oct 21, 2015)** – See [Changelog](./github_docs/CHANGELOG.md)
+Most Recent: **Version 2.1.0 (Nov 1, 2015)** – See [Changelog](./github_docs/CHANGELOG.md)
 
 ##### Why jumpstart?
 There are some excellent WordPress themes out there. Unfortunately, after years of building WordPress websites, you realize that none of them appear to be moving fast enough. There should be a theme that provides everything a WordPress developer needs to rapidly start a website and deliver it to completion in the least amount of time possible.
